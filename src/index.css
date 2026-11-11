@@ -81,6 +81,11 @@
   img { max-width: 100%; display: block; }
 }
 
+::selection {
+  background-color: rgba(184, 92, 107, 0.28);
+  color: #4A2630;
+}
+
 /* Motion */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(18px); }
