@@ -2,7 +2,7 @@ import { SITE } from '../../data/catalog'
 
 export function Footer() {
   return (
-    <footer className="border-t border-[rgba(122,46,60,0.08)]">
+    <footer>
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-10 sm:grid-cols-3 lg:grid-cols-4 pt-16 pb-12">
           <div className="lg:col-span-2">
