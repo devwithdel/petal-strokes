@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Container } from '../components/ui/Container'
+import { WaveDivider } from '../components/ui/WaveDivider'
 import { Button } from '../components/ui/Button'
 import { Modal } from '../components/ui/Modal'
 import { Toast } from '../components/ui/Toast'
@@ -80,8 +81,9 @@ export default function Home() {
         </Container>
       </section>
 
+      <WaveDivider />
       {/* Price strip */}
-      <section className="bg-cream/40 py-10 sm:py-12">
+      <section className="py-10 sm:py-12">
         <Container>
           <div className="reveal text-center">
             <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">Starting at ₱180</p>
@@ -99,6 +101,7 @@ export default function Home() {
         </Container>
       </section>
 
+      <WaveDivider flip />
       {/* Featured */}
       <section id="featured" className="py-16 sm:py-20">
         <Container>
@@ -117,7 +120,7 @@ export default function Home() {
       </section>
 
       {/* Brand story */}
-      <section className="bg-cream/50 py-16 sm:py-20">
+      <section className="py-16 sm:py-20">
         <Container size="md">
           <div className="grid gap-8 md:grid-cols-2 md:items-center">
             <div className="reveal">
@@ -208,7 +211,7 @@ export default function Home() {
 
       {/* Testimonials */}
       {TESTIMONIALS.length > 0 && (
-        <section className="bg-cream/40 py-16 sm:py-20">
+        <section className="py-16 sm:py-20">
           <Container>
             <div className="reveal text-center">
               <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">Kind words</p>
@@ -246,7 +249,7 @@ export default function Home() {
       )}
 
       {/* Message us */}
-      <section id="message-us" className="bg-cream/60 py-16 sm:py-20">
+      <section id="message-us" className="py-16 sm:py-20">
         <Container size="md" className="text-center">
           <div className="reveal">
             <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">Ordering</p>
