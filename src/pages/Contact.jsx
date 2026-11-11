@@ -8,7 +8,7 @@ const platforms = [
     handle: SITE.instagram.handle,
     href: SITE.instagram.dm,
     desc: 'DM us for orders and inquiries.',
-    cta: 'Open Instagram DM',
+    cta: 'Open Instagram',
   },
   {
     name: 'TikTok',

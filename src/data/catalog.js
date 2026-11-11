@@ -43,10 +43,9 @@ export const SITE = {
   name: 'Petal Strokes',
   tagline: 'Handmade satin ribbon rose bouquets, made with love in Ozamiz City.',
   city: 'Ozamiz City, Philippines',
-  instagram: { handle: '@petalstroke_8', dm: 'https://ig.me/m/petalstroke_8' },
+  instagram: { handle: '@petalstroke_8', dm: 'https://www.instagram.com/petalstroke_8', url: 'https://www.instagram.com/petalstroke_8' },
   tiktok: { handle: '@petalstrokes6', url: 'https://www.tiktok.com/@petalstrokes6' },
-  // Add a Facebook/Messenger link here if she has one, otherwise leave null.
-  facebook: null,
+  facebook: { handle: 'Petal Strokes', dm: 'https://www.facebook.com/profile.php?id=61593725474100', url: 'https://www.facebook.com/profile.php?id=61593725474100' },
 }
 
 export const RIBBON_COLORS = [

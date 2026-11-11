@@ -254,7 +254,7 @@ export default function Home() {
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <a href={SITE.instagram.dm} target="_blank" rel="noopener noreferrer">
-                <Button size="lg">Instagram DM</Button>
+                <Button size="lg">Instagram</Button>
               </a>
               <a href={SITE.tiktok.url} target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" size="lg">TikTok</Button>

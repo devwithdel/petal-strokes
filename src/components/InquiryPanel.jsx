@@ -146,7 +146,7 @@ export function InquiryPanel({ bouquet, onToast }) {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-full border border-rose-deep px-4 py-2.5 text-sm font-medium text-rose-deep transition hover:bg-rose-deep hover:text-cream"
           >
-            Open Instagram DM
+            Open Instagram
           </a>
           <a
             href={SITE.tiktok.url}

@@ -16,6 +16,7 @@ export function Footer() {
             <ul className="mt-2 space-y-1 text-sm text-body">
               <li>Instagram {SITE.instagram.handle}</li>
               <li>TikTok {SITE.tiktok.handle}</li>
+              {SITE.facebook && <li>Facebook {SITE.facebook.handle}</li>}
             </ul>
           </div>
           <div>
