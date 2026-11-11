@@ -6,7 +6,7 @@ import { Button } from '../components/ui/Button'
 import { Toast } from '../components/ui/Toast'
 import { useToast } from '../hooks/useToast'
 import { useReveal } from '../hooks/useReveal'
-import { BOUQUETS, COLOR_IMAGES, FAQ, SIZES, SITE, STORY_HIGHLIGHTS, story as STORY, TESTIMONIALS } from '../data/catalog'
+import { BOUQUETS, COLOR_IMAGES, FAQ, REPLY_TIME, SIZES, SITE, STORY_HIGHLIGHTS, story as STORY, TESTIMONIALS } from '../data/catalog'
 
 import { InquiryPanel } from '../components/InquiryPanel'
 
@@ -252,26 +252,62 @@ export default function Home() {
         </section>
       )}
 
-      {/* Message us */}
+      {/* Ready to order */}
       <section id="message-us" className="section-pad">
-        <Container size="md" className="text-center">
-          <div className="reveal">
-            <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">Ordering</p>
-            <h2 className="mt-2 font-script text-4xl sm:text-5xl text-charcoal">Ready to order?</h2>
-            <p className="mt-4 text-charcoal-soft">
-              Send us a message on your favourite platform. We'll confirm details
-              and final price in chat.
-            </p>
-            <div className="mt-8 flex flex-wrap justify-center gap-3">
-              <a href={SITE.instagram.dm} target="_blank" rel="noopener noreferrer">
-                <Button size="lg">Instagram</Button>
-              </a>
-              <a href={SITE.tiktok.url} target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" size="lg">TikTok</Button>
-              </a>
-            </div>
+        <div
+          className="reveal mx-auto max-w-[520px] rounded-[28px] bg-[rgba(251,247,240,0.35)] shadow-card p-10 sm:p-16 text-center"
+        >
+          <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">
+            Still have questions?
+          </p>
+          <h2 className="mt-2 font-script text-4xl sm:text-5xl text-charcoal">
+            Let's talk flowers
+          </h2>
+          <p className="mt-4 text-lg text-body">
+            Message us on your favourite platform. We'll confirm details and the
+            final price in chat.
+          </p>
+          <div className="mt-8 flex flex-col sm:flex-row justify-center gap-3 w-full sm:max-w-[420px]">
+            <a
+              href={SITE.instagram.dm}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex w-full sm:w-auto h-[52px] min-w-[180px] items-center justify-center gap-2 rounded-full bg-rose-deep px-6 text-base font-medium text-cream transition hover:bg-charcoal focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
+              aria-label="Instagram"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="17.5" x2="18.5" y2="18.5" />
+              </svg>
+              Instagram
+            </a>
+            <a
+              href={SITE.tiktok.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex w-full sm:w-auto h-[52px] min-w-[180px] items-center justify-center gap-2 rounded-full border-2 border-rose-deep bg-cream px-6 text-base font-medium text-rose-text transition hover:bg-rose-deep hover:text-cream focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
+              aria-label="TikTok"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 3v4.4a4 4 0 0 0-.8 2.4l-1.4 2.2a4 4 0 0 0-.3 2.4v2c0 .6.4 1 1 1h6.4a1 1 0 0 0 1-1V12a4 4 0 0 0-.3-2.4l-1.4-2.2A4 4 0 0 0 12 7.4V3z" />
+              </svg>
+              TikTok
+            </a>
           </div>
-        </Container>
+          <p className="mt-6 text-sm text-body">
+            {SITE.instagram.handle} on Instagram · {SITE.tiktok.handle} on TikTok
+          </p>
+          <p className="mt-3 text-sm text-body">{REPLY_TIME}</p>
+          <p className="mt-6 text-sm text-body">
+            <a
+              href="#order"
+              className="text-rose-text underline underline-offset-4 hover:text-rose-deep focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
+            >
+              Build your bouquet
+            </a>
+          </p>
+        </div>
       </section>
 
       <Toast message={toast} />
