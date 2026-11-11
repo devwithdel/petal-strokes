@@ -36,13 +36,13 @@ export function Footer() {
             <p className="text-sm text-body leading-relaxed">{SITE.tagline}</p>
           </div>
           <div>
-            <p className="text-sm font-semibold text-charcoal uppercase tracking-wider mb-3">{FOOTER.explore.title}</p>
+            <p className="text-sm font-semibold text-rose-text uppercase tracking-wider mb-3">{FOOTER.explore.title}</p>
             <ul className="space-y-2">
               {FOOTER.explore.links.map((link) => (
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-sm text-body hover:text-rose-deep focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
+                    className="text-base text-body underline underline-offset-4 decoration-transparent hover:decoration-current hover:text-rose-deep focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
                   >
                     {link.label}
                   </a>
@@ -51,7 +51,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <p className="text-sm font-semibold text-charcoal uppercase tracking-wider mb-3">{FOOTER.findUs.title}</p>
+            <p className="text-sm font-semibold text-rose-text uppercase tracking-wider mb-3">{FOOTER.findUs.title}</p>
             <ul className="space-y-2">
               <li>
                 <SocialIcon
@@ -80,7 +80,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <p className="text-sm font-semibold text-charcoal uppercase tracking-wider mb-3">{FOOTER.ordering.title}</p>
+            <p className="text-sm font-semibold text-rose-text uppercase tracking-wider mb-3">{FOOTER.ordering.title}</p>
             <p className="text-sm text-body mb-4">{SITE.orderingText}</p>
             <button
               onclick="document.getElementById('order')?.scrollIntoView({behavior:'smooth'})"
