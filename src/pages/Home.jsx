@@ -276,15 +276,15 @@ export default function Home() {
             Message us on your favourite platform. We'll confirm details and the
             final price in chat.
           </p>
-          <div className="mt-6 flex flex-col sm:flex-row flex-wrap justify-center gap-6 sm:gap-14 w-full">
+          <div className="mt-6 flex flex-wrap flex-col sm:flex-row items-center justify-center gap-3.5">
             <a
               href={SITE.instagram.dm}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:flex-[1_1_0] sm:min-w-[150px] sm:max-w-[200px] h-[52px] items-center justify-center gap-2 rounded-full bg-rose-deep px-5 text-base font-medium text-cream transition-all duration-200 hover:bg-charcoal hover:-translate-y-2 hover:shadow-soft focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
+              className="inline-flex flex-row items-center justify-center gap-10 text-center h-[52px] px-[24px] rounded-full whitespace-nowrap flex-[0_0_auto] min-w-[180px] w-full sm:w-[200px] max-w-[320px] mx-auto sm:mx-0 bg-rose-deep text-cream transition-all duration-200 hover:bg-charcoal hover:-translate-y-2 hover:shadow-soft focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
               aria-label={`Message Petal Strokes on Instagram, ${SITE.instagram.handle}`}
             >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <svg className="block w-5 h-5 shrink-0 static text-current" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
                 <line x1="17.5" y1="17.5" x2="18.5" y2="18.5" />
@@ -295,20 +295,20 @@ export default function Home() {
               href={SITE.tiktok.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:flex-[1_1_0] sm:min-w-[150px] sm:max-w-[200px] h-[52px] items-center justify-center gap-2 rounded-full border-2 border-rose-text bg-cream px-5 text-base font-medium text-rose-text transition-all duration-200 hover:bg-rose-deep hover:text-cream hover:-translate-y-2 hover:shadow-soft focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
+              className="inline-flex flex-row items-center justify-center gap-10 text-center h-[52px] px-[24px] rounded-full whitespace-nowrap flex-[0_0_auto] min-w-[180px] w-full sm:w-[200px] max-w-[320px] mx-auto sm:mx-0 border-2 border-rose-text bg-cream text-base font-medium text-rose-text transition-all duration-200 hover:bg-rose-deep hover:text-cream hover:-translate-y-2 hover:shadow-soft focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
               aria-label={`Message Petal Strokes on TikTok, ${SITE.tiktok.handle}`}
             >
-              <TikTokIcon size={20} />
+              <TikTokIcon size={20} className="block shrink-0 static text-current" />
               TikTok
             </a>
             <a
               href={SITE.facebook.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:flex-[1_1_0] sm:min-w-[150px] sm:max-w-[200px] h-[52px] items-center justify-center gap-2 rounded-full border-2 border-rose-text bg-cream px-5 text-base font-medium text-rose-text transition-all duration-200 hover:bg-rose-deep hover:text-cream hover:-translate-y-2 hover:shadow-soft focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
+              className="inline-flex flex-row items-center justify-center gap-10 text-center h-[52px] px-[24px] rounded-full whitespace-nowrap flex-[0_0_auto] min-w-[180px] w-full sm:w-[200px] max-w-[320px] mx-auto sm:mx-0 border-2 border-rose-text bg-cream text-base font-medium text-rose-text transition-all duration-200 hover:bg-rose-deep hover:text-cream hover:-translate-y-2 hover:shadow-soft focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
               aria-label={`Message Petal Strokes on Facebook, ${SITE.facebook.handle}`}
             >
-              <FacebookIcon size={20} />
+              <FacebookIcon size={20} className="block shrink-0 static text-current" />
               Facebook
             </a>
           </div>
