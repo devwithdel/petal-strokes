@@ -2,8 +2,10 @@ import { useState, useMemo, useEffect } from 'react'
 import { SIZES, RIBBON_COLORS, ADDONS, SITE } from '../data/catalog'
 import { Button } from './ui/Button'
 
-export function InquiryPanel({ onToast, onColorChange }) {
-  const [size, setSize] = useState(SIZES[1])
+export function InquiryPanel({ size: sizeProp, onSizeChange, onToast, onColorChange }) {
+  const [internalSize, setInternalSize] = useState(SIZES[1])
+  const size = sizeProp ?? internalSize
+  const setSize = onSizeChange ?? setInternalSize
   const [color, setColor] = useState(RIBBON_COLORS[0])
   const [addons, setAddons] = useState({})
   const [cardMessage, setCardMessage] = useState('')

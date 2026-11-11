@@ -14,6 +14,7 @@ export default function Home() {
   const ref = useReveal()
   const [heroOk, setHeroOk] = useState(true)
   const [selectedColor, setSelectedColor] = useState(RIBBON_COLORS[0])
+  const [orderSize, setOrderSize] = useState(SIZES[1])
   const [openFaq, setOpenFaq] = useState(0)
   const { toast, show } = useToast()
 
@@ -43,9 +44,9 @@ export default function Home() {
                 {SITE.tagline}
               </p>
               <div className="reveal mt-8 flex flex-wrap gap-3">
-                <Link to="/gallery">
-                  <Button size="lg">Explore bouquets</Button>
-                </Link>
+                <Button size="lg" onClick={() => document.getElementById('order')?.scrollIntoView({ behavior: 'smooth' })}>
+                  Explore bouquets
+                </Button>
                 <a
                   href="#message-us"
                   className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-rose-deep bg-cream px-7 py-3.5 text-base font-medium text-rose-deep transition-all duration-200 hover:bg-rose-deep hover:text-cream"
@@ -97,11 +98,19 @@ export default function Home() {
           </div>
           <div className="reveal mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
             {SIZES.map((s) => (
-              <div key={s.pieces} className="rounded-2xl bg-cream p-4 text-center shadow-soft">
+              <button
+                key={s.pieces}
+                type="button"
+                onClick={() => {
+                  setOrderSize(s)
+                  document.getElementById('order')?.scrollIntoView({ behavior: 'smooth' })
+                }}
+                className="rounded-2xl bg-cream p-4 text-center shadow-soft transition hover:-translate-y-1 hover:shadow-lift"
+              >
                 <p className="font-script text-3xl text-rose-text">{s.pieces}</p>
                 <p className="text-xs text-charcoal-soft">roses</p>
                 <p className="mt-1 font-medium text-rose-deep">₱{s.price}</p>
-              </div>
+              </button>
             ))}
           </div>
         </Container>
@@ -145,7 +154,7 @@ export default function Home() {
               </div>
             </div>
             <div className="rounded-2xl bg-cream p-6 shadow-soft sm:p-8">
-              <InquiryPanel onToast={show} onColorChange={setSelectedColor} />
+              <InquiryPanel size={orderSize} onSizeChange={setOrderSize} onToast={show} onColorChange={setSelectedColor} />
             </div>
           </div>
         </Container>
