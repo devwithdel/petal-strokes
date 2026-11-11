@@ -1,4 +1,4 @@
-import { SITE } from '../../data/catalog'
+import { FOOTER, SITE } from '../../data/catalog'
 
 export function Footer() {
   return (
@@ -28,37 +28,22 @@ export function Footer() {
             <p className="text-sm text-body leading-relaxed">{SITE.tagline}</p>
           </div>
           <div>
-            <p className="text-sm font-semibold text-charcoal uppercase tracking-wider mb-3">Explore</p>
+            <p className="text-sm font-semibold text-charcoal uppercase tracking-wider mb-3">{FOOTER.explore.title}</p>
             <ul className="space-y-2">
-              <li>
-                <a href="#order" className="text-sm text-body hover:text-rose-deep focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2">
-                  Order
-                </a>
-              </li>
-              <li>
-                <a href="/gallery" className="text-sm text-body hover:text-rose-deep focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2">
-                  Gallery
-                </a>
-              </li>
-              <li>
-                <a href="/pricing" className="text-sm text-body hover:text-rose-deep focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2">
-                  Pricing
-                </a>
-              </li>
-              <li>
-                <a href="/how-to-order" className="text-sm text-body hover:text-rose-deep focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2">
-                  How to order
-                </a>
-              </li>
-              <li>
-                <a href="#faq" className="text-sm text-body hover:text-rose-deep focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2">
-                  FAQ
-                </a>
-              </li>
+              {FOOTER.explore.links.map((link) => (
+                <li key={link.label}>
+                  <a
+                    href={link.href}
+                    className="text-sm text-body hover:text-rose-deep focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
           <div>
-            <p className="text-sm font-semibold text-charcoal uppercase tracking-wider mb-3">Find us</p>
+            <p className="text-sm font-semibold text-charcoal uppercase tracking-wider mb-3">{FOOTER.findUs.title}</p>
             <ul className="space-y-2">
               <li>
                 <a
@@ -99,25 +84,25 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <p className="text-sm font-semibold text-charcoal uppercase tracking-wider mb-3">Ordering</p>
+            <p className="text-sm font-semibold text-charcoal uppercase tracking-wider mb-3">{FOOTER.ordering.title}</p>
             <p className="text-sm text-body mb-4">{SITE.orderingText}</p>
             <button
               onclick="document.getElementById('order')?.scrollIntoView({behavior:'smooth'})"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-rose-deep px-6 py-2.5 text-base font-medium text-cream hover:bg-charcoal focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
             >
-              Build your bouquet
+              {FOOTER.ordering.button}
             </button>
           </div>
         </div>
         <div className="mt-12 border-t border-[rgba(122,46,60,0.15)] pt-8 sm:pt-10">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-sm leading-7">
-            <p className="text-body">© 2026 Petal Strokes. Handmade in Ozamiz City, Philippines.</p>
+            <p className="text-body">{FOOTER.bottom.copyright}</p>
             <a
               href="#"
               onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
               className="text-body hover:text-rose-deep focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
             >
-              Back to top ↑
+              {FOOTER.bottom.backToTop}
             </a>
           </div>
         </div>

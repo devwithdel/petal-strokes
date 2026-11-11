@@ -72,6 +72,34 @@ export const SITE = {
   facebook: { handle: 'Petal Strokes', dm: 'https://www.facebook.com/profile.php?id=61593725474100', url: 'https://www.facebook.com/profile.php?id=61593725474100' },
 }
 
+// CONFIRM WITH OWNER: review footer section titles, links, and copyright text.
+export const FOOTER = {
+  brand: {
+    heading: 'Petal Strokes',
+  },
+  explore: {
+    title: 'Explore',
+    links: [
+      { label: 'Order', href: '#order' },
+      { label: 'Gallery', href: '/gallery' },
+      { label: 'Pricing', href: '/pricing' },
+      { label: 'How to order', href: '/how-to-order' },
+      { label: 'FAQ', href: '#faq' },
+    ],
+  },
+  findUs: {
+    title: 'Find us',
+  },
+  ordering: {
+    title: 'Ordering',
+    button: 'Build your bouquet',
+  },
+  bottom: {
+    copyright: '© 2026 Petal Strokes. Handmade in Ozamiz City, Philippines.',
+    backToTop: 'Back to top ↑',
+  },
+}
+
 export const RIBBON_COLORS = [
   { id: 'pink', name: 'Pink', hex: '#F4A7B9' },
   { id: 'yellow', name: 'Yellow', hex: '#F5D76E' },
