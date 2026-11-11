@@ -6,7 +6,7 @@ import { Modal } from '../components/ui/Modal'
 import { Toast } from '../components/ui/Toast'
 import { useToast } from '../hooks/useToast'
 import { useReveal } from '../hooks/useReveal'
-import { BOUQUETS, RIBBON_COLORS, SIZES, SITE } from '../data/catalog'
+import { BOUQUETS, FAQ, RIBBON_COLORS, SIZES, SITE } from '../data/catalog'
 import { BouquetCard } from '../components/BouquetCard'
 import { InquiryPanel } from '../components/InquiryPanel'
 
@@ -14,6 +14,7 @@ export default function Home() {
   const ref = useReveal()
   const [active, setActive] = useState(null)
   const [heroOk, setHeroOk] = useState(true)
+  const [openFaq, setOpenFaq] = useState(0)
   const { toast, show } = useToast()
   const featured = BOUQUETS.filter((b) => b.featured)
 
@@ -158,6 +159,33 @@ export default function Home() {
                   style={{ backgroundColor: c.hex }}
                 />
                 <span className="text-xs text-charcoal-soft">{c.name}</span>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 sm:py-20">
+        <Container size="md">
+          <div className="reveal text-center">
+            <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">Good to know</p>
+            <h2 className="mt-2 font-script text-4xl sm:text-5xl text-charcoal">Frequently asked</h2>
+          </div>
+          <div className="mt-8 space-y-3">
+            {FAQ.map((item, i) => (
+              <div key={item.q} className="reveal rounded-2xl bg-cream shadow-soft">
+                <button
+                  onClick={() => setOpenFaq(openFaq === i ? -1 : i)}
+                  className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
+                  aria-expanded={openFaq === i}
+                >
+                  <span className="font-medium text-charcoal">{item.q}</span>
+                  <span className="text-rose-text">{openFaq === i ? '−' : '+'}</span>
+                </button>
+                {openFaq === i && (
+                  <p className="px-5 pb-4 text-sm text-charcoal-soft">{item.a}</p>
+                )}
               </div>
             ))}
           </div>

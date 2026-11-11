@@ -2,6 +2,29 @@
 // Edit this file to update products, prices, colors and add-ons.
 // Images live in /public/images — swap the files and keep the same filenames.
 
+export const FAQ = [
+  {
+    q: 'How long does an order take?',
+    a: 'Usually 1–3 days depending on size and current queue. We confirm the timeline in chat.',
+  },
+  {
+    q: 'Pickup or delivery in Ozamiz City?',
+    a: 'Both! Pick up from us in Ozamiz City, or arrange local delivery (fee depends on area).',
+  },
+  {
+    q: 'What payment methods do you accept?',
+    a: 'GCash and Cash on Delivery (COD). We confirm details in chat before finalizing.',
+  },
+  {
+    q: 'Can I request custom colors or a message?',
+    a: 'Yes! Custom ribbon colors, messages, and add-ons are welcome — just tell us in your message.',
+  },
+  {
+    q: 'How do I care for satin roses?',
+    a: 'They never wilt! Keep them dry and out of direct sun; gently dust to keep them pretty.',
+  },
+]
+
 export const SITE = {
   name: 'Petal Strokes',
   tagline: 'Handmade satin ribbon rose bouquets, made with love in Ozamiz City.',
