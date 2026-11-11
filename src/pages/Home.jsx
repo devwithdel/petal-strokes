@@ -71,7 +71,7 @@ export default function Home() {
                 {heroOk ? (
                   <img
                     src="/images/hero-bouquet.webp"
-                    alt="A handmade satin ribbon rose bouquet"
+                    alt="A handcrafted flower bouquet"
                     width="480"
                     height="600"
                     fetchPriority="high"
