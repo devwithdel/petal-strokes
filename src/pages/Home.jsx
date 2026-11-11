@@ -6,7 +6,7 @@ import { Toast } from '../components/ui/Toast'
 import { useToast } from '../hooks/useToast'
 import { useReveal } from '../hooks/useReveal'
 import { FAQ, SIZES, SITE, STORY_HIGHLIGHTS, story as STORY, TESTIMONIALS } from '../data/catalog'
-import { TikTokIcon } from '../components/ui/BrandIcons'
+import { FacebookIcon, TikTokIcon } from '../components/ui/BrandIcons'
 
 import { InquiryPanel } from '../components/InquiryPanel'
 
@@ -300,6 +300,16 @@ export default function Home() {
             >
               <TikTokIcon size={20} />
               TikTok
+            </a>
+            <a
+              href={SITE.facebook.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex w-full sm:w-auto h-[52px] min-w-[180px] items-center justify-center gap-2 rounded-full border-2 border-rose-deep bg-cream px-6 text-base font-medium text-rose-text transition hover:bg-rose-deep hover:text-cream focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
+              aria-label={`Message Petal Strokes on Facebook, ${SITE.facebook.handle}`}
+            >
+              <FacebookIcon size={20} />
+              Facebook
             </a>
           </div>
           <p className="mt-6 text-sm text-body">
