@@ -57,7 +57,7 @@ export default function Home() {
               </div>
             </div>
             <div className="reveal flex justify-center lg:justify-end">
-              <div className="float-bouquet relative h-[420px] w-full max-w-md -rotate-3">
+              <div className="float-bouquet relative max-h-[460px] w-full max-w-md -rotate-3">
                 {heroOk ? (
                   <img
                     src="/images/hero-bouquet.webp"
