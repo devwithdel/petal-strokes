@@ -40,6 +40,7 @@
   --shadow-card: 0 12px 36px -14px rgba(184, 92, 107, 0.28);
   --shadow-lift: 0 20px 48px -16px rgba(184, 92, 107, 0.35);
   --section-space: clamp(64px, 9vw, 112px);
+  --section-top-color: #F0CFCF;
 }
 
 @layer base {

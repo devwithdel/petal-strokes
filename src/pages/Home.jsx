@@ -102,7 +102,7 @@ export default function Home() {
 
       <WaveDivider />
       {/* Price strip */}
-      <section id="featured" className="section-veil section-pad">
+      <section id="featured" className="section-veil section-pad" style={{ backgroundColor: 'var(--section-top-color)' }}>
         <Container>
           <div className="reveal text-center">
             <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">Starting at ₱180</p>
