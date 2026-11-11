@@ -30,9 +30,16 @@ export default function Home() {
               <p className="reveal text-sm font-medium uppercase tracking-[0.25em] text-rose-text">
                 Handmade satin ribbon roses · Ozamiz City
               </p>
-              <h1 className="reveal mt-4 font-script text-6xl sm:text-7xl lg:text-8xl text-charcoal">
-                {SITE.name}
-              </h1>
+              <h1 className="sr-only">{SITE.name}</h1>
+              <img
+                src="/petal-strokes-wordmark.png"
+                alt={SITE.name}
+                width="420"
+                height="120"
+                fetchPriority="high"
+                className="reveal mt-4 h-auto w-full max-w-md"
+                onError={(e) => { e.currentTarget.style.display = 'none' }}
+              />
               <p className="reveal mt-4 max-w-xl text-lg text-body">
                 {SITE.tagline}
               </p>
