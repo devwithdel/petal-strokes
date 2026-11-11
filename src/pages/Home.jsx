@@ -13,6 +13,7 @@ import { InquiryPanel } from '../components/InquiryPanel'
 export default function Home() {
   const ref = useReveal()
   const [active, setActive] = useState(null)
+  const [heroOk, setHeroOk] = useState(true)
   const { toast, show } = useToast()
   const featured = BOUQUETS.filter((b) => b.featured)
 
@@ -46,12 +47,25 @@ export default function Home() {
               </div>
             </div>
             <div className="reveal flex justify-center lg:justify-end">
-              <img
-                src="/images/hero-bouquet.png"
-                alt="A handmade satin ribbon rose bouquet"
-                className="float-bouquet h-auto w-full max-w-md -rotate-3 rounded-3xl object-contain"
-                onError={(e) => { e.currentTarget.style.opacity = '0.35' }}
-              />
+              <div className="float-bouquet relative h-[420px] w-full max-w-md -rotate-3">
+                {heroOk ? (
+                  <img
+                    src="/images/hero-bouquet.png"
+                    alt="A handmade satin ribbon rose bouquet"
+                    width="480"
+                    height="600"
+                    className="h-full w-full rounded-3xl object-contain"
+                    onError={() => setHeroOk(false)}
+                  />
+                ) : (
+                  <div
+                    aria-hidden="true"
+                    className="flex h-full w-full items-center justify-center rounded-3xl bg-gradient-to-br from-blush via-rose-peach to-rose shadow-card"
+                  >
+                    <span className="font-script text-6xl text-rose-text/70">Petal Strokes</span>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </Container>
