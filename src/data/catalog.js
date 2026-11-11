@@ -132,7 +132,7 @@ export const BOUQUETS = [
   {
     id: 'classic-rose',
     name: 'Classic Ribbon Rose',
-    description: 'Timeless satin ribbon roses in a soft blush wrap. Our most-loved bouquet.',
+    description: 'A timeless flower bouquet in soft blush wrap. Our most-loved bouquet.',
     image: '/images/bouquet-classic.jpg',
     alt: 'A handcrafted flower bouquet in soft blush tones',
     tags: ['bestseller', 'romantic'],
@@ -141,7 +141,7 @@ export const BOUQUETS = [
   {
     id: 'blush-cascade',
     name: 'Blush Cascade',
-    description: 'Flowing layers of pink and cream ribbon roses with trailing greenery.',
+    description: 'Flowing layers of pink and cream flowers with trailing greenery.',
     image: '/images/bouquet-blush-cascade.jpg',
     alt: 'A cascading flower bouquet in blush and cream',
     tags: ['romantic', 'wedding'],
@@ -159,7 +159,7 @@ export const BOUQUETS = [
   {
     id: 'moonlight-white',
     name: 'Moonlight White',
-    description: 'Pure cream and white ribbon roses for an elegant, airy feel.',
+    description: 'Pure cream and white flowers for an elegant, airy feel.',
     image: '/images/bouquet-moonlight.jpg',
     alt: 'A white and cream flower bouquet',
     tags: ['minimal', 'elegant'],
@@ -168,7 +168,7 @@ export const BOUQUETS = [
   {
     id: 'golden-hour',
     name: 'Golden Hour',
-    description: 'Sunflower-yellow ribbon roses with a touch of gold shimmer.',
+    description: 'Sunflower-yellow flowers with a touch of gold shimmer.',
     image: '/images/bouquet-golden.jpg',
     alt: 'A golden yellow flower bouquet',
     tags: ['cheerful'],
@@ -177,7 +177,7 @@ export const BOUQUETS = [
   {
     id: 'lavender-dream',
     name: 'Lavender Dream',
-    description: 'Soft purple and lilac ribbon roses, dreamy and delicate.',
+    description: 'Soft purple and lilac flowers, dreamy and delicate.',
     image: '/images/bouquet-lavender.jpg',
     alt: 'A soft purple and lilac flower bouquet',
     tags: ['soft'],
@@ -186,7 +186,7 @@ export const BOUQUETS = [
   {
     id: 'red-passion',
     name: 'Red Passion',
-    description: 'Deep red ribbon roses for bold, heartfelt gestures.',
+    description: 'Deep red flowers for bold, heartfelt gestures.',
     image: '/images/bouquet-red.jpg',
     alt: 'A deep red flower bouquet',
     tags: ['bold'],
