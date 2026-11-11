@@ -43,7 +43,7 @@ export function Layout() {
       <WaveDivider />
       <Footer />
       <Link
-        to="/contact"
+        to="/#message-us"
         className="fixed bottom-5 right-5 z-40 rounded-full bg-rose-deep px-5 py-3 text-sm font-medium text-cream shadow-lift transition hover:bg-charcoal md:hidden"
         aria-label="Message us"
       >

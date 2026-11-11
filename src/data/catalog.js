@@ -80,8 +80,6 @@ export const FOOTER = {
     links: [
       { label: 'Order', href: '#order' },
       { label: 'Gallery', href: '/gallery' },
-      { label: 'Pricing', href: '/pricing' },
-      { label: 'How to order', href: '/how-to-order' },
       { label: 'FAQ', href: '#faq' },
     ],
   },
