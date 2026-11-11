@@ -1,6 +1,7 @@
 import { Link, Outlet, useLocation } from 'react-router-dom'
 import { Navbar } from './Navbar'
 import { Footer } from './Footer'
+import { WaveDivider } from '../ui/WaveDivider'
 
 export function Layout() {
   const location = useLocation()
@@ -12,6 +13,7 @@ export function Layout() {
           <Outlet />
         </div>
       </main>
+      <WaveDivider />
       <Footer />
       <Link
         to="/contact"

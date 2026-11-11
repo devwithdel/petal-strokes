@@ -5,7 +5,7 @@ export function WaveDivider({ flip = false, color = '#FBF7F0' }) {
         <path
           d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z"
           fill={color}
-          opacity="0.5"
+          opacity="0.2"
         />
       </svg>
     </div>

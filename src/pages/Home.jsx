@@ -116,8 +116,6 @@ export default function Home() {
         </Container>
       </section>
 
-      <WaveDivider flip />
-
       {/* Order / Build your bouquet */}
       <section id="order" className="section-veil section-pad">
         <Container>
