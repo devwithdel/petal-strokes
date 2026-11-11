@@ -26,7 +26,7 @@ export const FAQ = [
 ]
 
 // CONFIRM WITH OWNER: review and edit this story text.
-export const STORY = {
+export const story = {
   eyebrow: 'Our story',
   heading: 'Made by hand, sent with love.',
   body: [

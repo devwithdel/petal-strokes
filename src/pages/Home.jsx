@@ -6,13 +6,14 @@ import { Button } from '../components/ui/Button'
 import { Toast } from '../components/ui/Toast'
 import { useToast } from '../hooks/useToast'
 import { useReveal } from '../hooks/useReveal'
-import { BOUQUETS, COLOR_IMAGES, FAQ, RIBBON_COLORS, SIZES, SITE, STORY, TESTIMONIALS } from '../data/catalog'
+import { BOUQUETS, COLOR_IMAGES, FAQ, SIZES, SITE, story as STORY, TESTIMONIALS } from '../data/catalog'
 
 import { InquiryPanel } from '../components/InquiryPanel'
 
 export default function Home() {
   const ref = useReveal()
   const [heroOk, setHeroOk] = useState(true)
+  const [storyOk, setStoryOk] = useState(true)
   const [orderSize, setOrderSize] = useState(SIZES[1])
   const [openFaq, setOpenFaq] = useState(0)
   const { toast, show } = useToast()
@@ -137,53 +138,42 @@ export default function Home() {
 
       {/* Brand story */}
       <section className="py-16 sm:py-20">
-        <Container size="md">
-          <div className="grid gap-8 md:grid-cols-2 md:items-center">
-            <div className="reveal">
-              <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">{STORY.eyebrow}</p>
-              <h2 className="mt-2 font-script text-4xl sm:text-5xl text-charcoal">{STORY.heading}</h2>
-              {STORY.body.map((para, i) => (
-                <p key={i} className="mt-4 text-charcoal-soft">{para}</p>
-              ))}
-            </div>
-            <div className="reveal">
-              <div className="relative aspect-square w-full overflow-hidden rounded-2xl shadow-card">
+        <Container size={storyOk ? 'md' : 'sm'}>
+          {storyOk ? (
+            <div className="grid gap-8 md:grid-cols-2 md:items-center">
+              <div className="reveal">
+                <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">{STORY.eyebrow}</p>
+                <h2 className="mt-2 font-script text-4xl sm:text-5xl text-charcoal">{STORY.heading}</h2>
+                {STORY.body.map((para, i) => (
+                  <p key={i} className="mt-4 text-base text-body">{para}</p>
+                ))}
+              </div>
+              <div className="reveal">
                 <img
-                  src="/images/bouquet-classic.jpg"
-                  alt="A classic blush satin ribbon rose bouquet"
+                  src="/images/story.webp"
+                  alt="Petal Strokes story"
                   loading="lazy"
                   decoding="async"
                   width="700"
                   height="700"
-                  className="h-full w-full object-cover"
-                  onError={(e) => { e.currentTarget.style.display = 'none' }}
+                  className="aspect-square w-full rounded-2xl object-cover shadow-card"
+                  onError={() => setStoryOk(false)}
                 />
               </div>
             </div>
-          </div>
+          ) : (
+            <div className="reveal mx-auto max-w-[640px] text-center">
+              <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">{STORY.eyebrow}</p>
+              <h2 className="mt-2 font-script text-4xl sm:text-5xl text-charcoal">{STORY.heading}</h2>
+              {STORY.body.map((para, i) => (
+                <p key={i} className="mt-4 text-base text-body">{para}</p>
+              ))}
+            </div>
+          )}
         </Container>
       </section>
 
-      {/* Ribbon colors */}
-      <section className="py-16 sm:py-20">
-        <Container>
-          <div className="reveal text-center">
-            <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">Ribbon colors</p>
-            <h2 className="mt-2 font-script text-4xl sm:text-5xl text-charcoal">Choose your palette</h2>
-          </div>
-          <div className="reveal mt-8 flex flex-wrap justify-center gap-4">
-            {RIBBON_COLORS.map((c) => (
-              <div key={c.id} className="flex flex-col items-center gap-2">
-                <span
-                  className="h-14 w-14 rounded-full border border-line shadow-soft"
-                  style={{ backgroundColor: c.hex }}
-                />
-                <span className="text-xs text-charcoal-soft">{c.name}</span>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
+
 
       {/* FAQ */}
       <section className="py-16 sm:py-20">
