@@ -37,7 +37,7 @@ export default function Home() {
                 width="420"
                 height="120"
                 fetchPriority="high"
-                className="reveal mt-4 h-auto w-full max-w-md"
+                className="reveal mt-4 mb-4 h-auto w-full max-w-[clamp(220px,30vw,380px)]"
                 onError={(e) => { e.currentTarget.style.display = 'none' }}
               />
               <p className="reveal mt-4 max-w-xl text-lg text-body">
