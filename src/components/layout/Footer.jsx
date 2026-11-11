@@ -109,6 +109,18 @@ export function Footer() {
             </button>
           </div>
         </div>
+        <div className="mt-12 border-t border-[rgba(122,46,60,0.15)] pt-8 sm:pt-10">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-sm leading-7">
+            <p className="text-body">© 2026 Petal Strokes. Handmade in Ozamiz City, Philippines.</p>
+            <a
+              href="#"
+              onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+              className="text-body hover:text-rose-deep focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
+            >
+              Back to top ↑
+            </a>
+          </div>
+        </div>
       </div>
     </footer>
   )

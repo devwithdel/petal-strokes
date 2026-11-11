@@ -187,7 +187,7 @@ export default function Home() {
 
 
       {/* FAQ */}
-      <section className="section-veil section-pad">
+      <section id="faq" className="section-veil section-pad">
         <Container size="md">
           <div className="reveal text-center">
             <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">Good to know</p>
