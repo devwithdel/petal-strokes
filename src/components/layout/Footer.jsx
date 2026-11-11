@@ -7,7 +7,7 @@ export function Footer() {
   return (
     <footer className="bg-gradient-to-b from-[#F0CFCF] to-[#E8BFC3]">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-[40px] sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1.2fr_1.2fr] pt-16 pb-12">
+        <div className="grid gap-[40px] sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1.2fr_1.2fr] pt-12 pb-12">
           <div>
             <div className="flex flex-col items-start gap-3 mb-4">
               <div className="flex items-center gap-3">
