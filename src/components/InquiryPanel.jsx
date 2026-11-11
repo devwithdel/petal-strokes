@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect } from 'react'
-import { SIZES, RIBBON_COLORS, ADDONS, SITE } from '../data/catalog'
+import { SIZES, RIBBON_COLORS, ADDONS } from '../data/catalog'
 import { Button } from './ui/Button'
 
 export function InquiryPanel({ size: sizeProp, onSizeChange, onToast, onColorChange }) {
@@ -193,24 +193,6 @@ export function InquiryPanel({ size: sizeProp, onSizeChange, onToast, onColorCha
       {/* Actions */}
       <div className="flex flex-col gap-3">
         <Button size="lg" className="w-full" onClick={copy}>Copy message</Button>
-        <div className="grid grid-cols-2 gap-3">
-          <a
-            href={SITE.instagram.dm}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex min-h-[44px] items-center justify-center rounded-full bg-rose-deep px-4 py-2.5 text-base font-medium text-cream transition hover:bg-charcoal"
-          >
-            Open Instagram
-          </a>
-          <a
-            href={SITE.tiktok.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex min-h-[44px] items-center justify-center rounded-full border border-rose-deep px-4 py-2.5 text-base font-medium text-rose-deep transition hover:bg-rose-deep hover:text-cream"
-          >
-            Open TikTok
-          </a>
-        </div>
         <p className="text-xs text-muted">
           Instagram and TikTok can't prefill messages, so paste the copied text into our DM.
         </p>
