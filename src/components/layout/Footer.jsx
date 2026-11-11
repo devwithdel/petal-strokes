@@ -2,7 +2,7 @@ import { SITE } from '../../data/catalog'
 
 export function Footer() {
   return (
-    <footer>
+    <footer className="bg-gradient-to-b from-[#F0CFCF] to-[#E8BFC3]">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-10 sm:grid-cols-3 lg:grid-cols-4 pt-16 pb-12">
           <div className="lg:col-span-2">
