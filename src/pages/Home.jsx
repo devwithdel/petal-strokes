@@ -127,7 +127,7 @@ export default function Home() {
                 className="rounded-2xl bg-cream p-4 text-center shadow-soft transition hover:-translate-y-1 hover:shadow-lift"
               >
                 <p className="font-script text-3xl text-rose-text">{s.pieces}</p>
-                <p className="text-xs text-charcoal-soft">roses</p>
+                <p className="text-xs text-charcoal-soft">pieces</p>
                 <p className="mt-1 font-medium text-rose-deep">₱{s.price}</p>
               </button>
             ))}

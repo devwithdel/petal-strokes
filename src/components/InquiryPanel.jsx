@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect } from 'react'
-import { SIZES, RIBBON_COLORS, ADDONS } from '../data/catalog'
+import { SIZES, RIBBON_COLORS, ADDONS, SITE } from '../data/catalog'
 import { Button } from './ui/Button'
 
 export function InquiryPanel({ size: sizeProp, onSizeChange, onToast, onColorChange }) {
@@ -43,16 +43,19 @@ export function InquiryPanel({ size: sizeProp, onSizeChange, onToast, onColorCha
 
   const message = useMemo(() => {
     const addonsText = addonLines.length ? addonLines.join(', ') : 'no add-ons'
-    let msg = `Hi Petal Strokes! I'd like to order a satin ribbon rose bouquet: ${size.pieces} roses in ${color.name} ribbon, with ${addonsText}. Estimated total: ₱${total}.`
+    let msg = SITE.orderMessageTemplate
+      .replace('[N]', String(size.pieces))
+      .replace('[color]', color.name)
+      .replace('[add-ons or \'no add-ons\']', addonsText)
+      .replace('[amount]', String(total))
     if (addons.message && cardMessage.trim()) {
       msg += ` Message for the card: "${cardMessage.trim()}".`
     }
     if (neededBy) {
       msg += ` Needed by ${neededBy}.`
     }
-    msg += " Please let me know if it's available!"
     return msg
-  }, [size, color, addonLines, total, addons, cardMessage, neededBy])
+  }, [size, color, addonLines, total, addons, cardMessage, neededBy, SITE.orderMessageTemplate])
 
   const copy = async () => {
     try {
@@ -67,7 +70,7 @@ export function InquiryPanel({ size: sizeProp, onSizeChange, onToast, onColorCha
     <div className="space-y-6">
       {/* Size */}
       <div>
-        <p className="text-base font-semibold text-charcoal">Size (number of roses)</p>
+        <p className="text-base font-semibold text-charcoal">Size (number of pieces)</p>
         <div className="mt-3 flex flex-wrap gap-2">
           {SIZES.map((s) => {
             const selected = size.pieces === s.pieces
