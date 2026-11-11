@@ -281,7 +281,7 @@ export default function Home() {
               href={SITE.instagram.dm}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex w-full sm:w-auto h-[52px] min-w-[180px] items-center justify-center gap-2 rounded-full bg-rose-deep px-6 text-base font-medium text-cream transition hover:bg-charcoal focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
+              className="inline-flex w-full sm:w-auto h-[52px] min-w-[180px] items-center justify-center gap-2 rounded-full bg-rose-deep px-6 text-base font-medium text-cream transition-all duration-200 hover:bg-charcoal hover:-translate-y-2 hover:shadow-soft focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
               aria-label={`Message Petal Strokes on Instagram, ${SITE.instagram.handle}`}
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -295,7 +295,7 @@ export default function Home() {
               href={SITE.tiktok.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex w-full sm:w-auto h-[52px] min-w-[180px] items-center justify-center gap-2 rounded-full border-2 border-rose-deep bg-cream px-6 text-base font-medium text-rose-text transition hover:bg-rose-deep hover:text-cream focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
+              className="inline-flex w-full sm:w-auto h-[52px] min-w-[180px] items-center justify-center gap-2 rounded-full border-2 border-rose-text bg-cream px-6 text-base font-medium text-rose-text transition-all duration-200 hover:bg-rose-deep hover:text-cream hover:-translate-y-2 hover:shadow-soft focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
               aria-label={`Message Petal Strokes on TikTok, ${SITE.tiktok.handle}`}
             >
               <TikTokIcon size={20} />
@@ -305,7 +305,7 @@ export default function Home() {
               href={SITE.facebook.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex w-full sm:w-auto h-[52px] min-w-[180px] items-center justify-center gap-2 rounded-full border-2 border-rose-deep bg-cream px-6 text-base font-medium text-rose-text transition hover:bg-rose-deep hover:text-cream focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
+              className="inline-flex w-full sm:w-auto h-[52px] min-w-[180px] items-center justify-center gap-2 rounded-full border-2 border-rose-text bg-cream px-6 text-base font-medium text-rose-text transition-all duration-200 hover:bg-rose-deep hover:text-cream hover:-translate-y-2 hover:shadow-soft focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
               aria-label={`Message Petal Strokes on Facebook, ${SITE.facebook.handle}`}
             >
               <FacebookIcon size={20} />
