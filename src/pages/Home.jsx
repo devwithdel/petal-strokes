@@ -35,8 +35,8 @@ export default function Home() {
       <section className="relative flex min-h-[calc(100svh-72px)] items-center overflow-hidden lg:max-h-[760px]">
         <div className="light-beam -top-24 -right-10" />
         <Container className="relative py-8 sm:py-12">
-          <div className="grid items-center gap-10 lg:grid-cols-2">
-            <div>
+          <div className="grid items-center justify-items-center gap-10 lg:grid-cols-2">
+            <div className="text-center">
               <p className="reveal text-sm font-medium uppercase tracking-[0.25em] text-rose-text">
                 {SITE.eyebrow}
               </p>
@@ -48,13 +48,13 @@ export default function Home() {
                 width="751"
                 height="423"
                 fetchPriority="high"
-                className="reveal mt-4 mb-4 h-auto w-full max-w-[clamp(220px,30vw,380px)]"
+                className="reveal mt-4 mb-4 mx-auto max-w-[clamp(220px,30vw,380px)]"
                 onError={(e) => { e.currentTarget.style.display = 'none' }}
               />
-              <p className="reveal mt-4 max-w-xl text-lg text-body">
+              <p className="reveal mt-4 max-w-xl text-lg text-body text-center">
                 {SITE.tagline}
               </p>
-              <div className="reveal mt-8 flex flex-col sm:flex-row flex-wrap gap-3 w-full">
+              <div className="reveal mt-8 flex flex-col sm:flex-row flex-wrap gap-3 w-full items-center justify-center">
                 <Button size="lg" className="w-full sm:w-auto" onClick={() => document.getElementById('order')?.scrollIntoView({ behavior: 'smooth' })}>
                   Explore bouquets
                 </Button>
