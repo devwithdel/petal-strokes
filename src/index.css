@@ -53,6 +53,7 @@
     min-height: 100vh;
     background: linear-gradient(225deg, #F7DDD8 0%, #D4838C 48%, #B85C6B 100%);
     background-attachment: fixed;
+    overflow-x: hidden;
   }
   h1, h2, h3 {
     font-family: var(--font-script);
