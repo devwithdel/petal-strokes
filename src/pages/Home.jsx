@@ -66,8 +66,11 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <div className="reveal flex justify-center lg:justify-end">
-              <div className="float-bouquet relative h-[300px] w-[92%] max-w-md -rotate-3 sm:h-[400px] sm:w-full lg:h-[460px]">
+            <div className="reveal flex justify-center lg:justify-end items-center">
+              <div
+                className="float-bouquet relative aspect-[4/5] w-[clamp(280px,32vw,440px)] -rotate-3"
+                style={{ height: 'auto' }}
+              >
                 {heroOk ? (
                   <img
                     src="/images/hero-bouquet.webp"
@@ -75,21 +78,19 @@ export default function Home() {
                     width="480"
                     height="600"
                     fetchPriority="high"
-                    className="h-full w-full rounded-3xl object-cover shadow-card"
+                    className="aspect-[4/5] h-full w-full rounded-[28px] object-cover shadow-card"
                     onError={() => setHeroOk(false)}
                   />
                 ) : (
                   <div
                     aria-hidden="true"
-                    className="flex h-full w-full items-center justify-center rounded-3xl bg-gradient-to-br from-blush via-rose-peach to-rose shadow-card"
+                    className="aspect-[4/5] h-full w-full flex items-center justify-center rounded-[28px] bg-gradient-to-br from-blush via-rose-peach to-rose shadow-card"
                   >
                     <img
                       src="/petal-strokes-emblem.png"
                       alt=""
                       aria-hidden="true"
-                      width="160"
-                      height="160"
-                      className="h-40 w-40 object-contain"
+                      className="h-[55%] w-auto object-contain"
                       onError={(e) => { e.currentTarget.style.display = 'none' }}
                     />
                   </div>
