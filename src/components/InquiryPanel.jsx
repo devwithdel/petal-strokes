@@ -6,6 +6,8 @@ export function InquiryPanel({ onToast, onColorChange }) {
   const [size, setSize] = useState(SIZES[1])
   const [color, setColor] = useState(RIBBON_COLORS[0])
   const [addons, setAddons] = useState({})
+  const [cardMessage, setCardMessage] = useState('')
+  const [neededBy, setNeededBy] = useState('')
 
   useEffect(() => {
     onColorChange?.(color)
@@ -39,8 +41,16 @@ export function InquiryPanel({ onToast, onColorChange }) {
 
   const message = useMemo(() => {
     const addonsText = addonLines.length ? addonLines.join(', ') : 'no add-ons'
-    return `Hi Petal Strokes! I'd like to order the satin ribbon rose bouquet with ${size.pieces} pieces in ${color.name} ribbon, with ${addonsText}. Estimated total: ₱${total}.`
-  }, [size, color, addonLines, total])
+    let msg = `Hi Petal Strokes! I'd like to order a satin ribbon rose bouquet: ${size.pieces} roses in ${color.name} ribbon, with ${addonsText}. Estimated total: ₱${total}.`
+    if (addons.message && cardMessage.trim()) {
+      msg += ` Message for the card: "${cardMessage.trim()}".`
+    }
+    if (neededBy) {
+      msg += ` Needed by ${neededBy}.`
+    }
+    msg += " Please let me know if it's available!"
+    return msg
+  }, [size, color, addonLines, total, addons, cardMessage, neededBy])
 
   const copy = async () => {
     try {
@@ -137,6 +147,31 @@ export function InquiryPanel({ onToast, onColorChange }) {
               </div>
             )
           })}
+        </div>
+      </div>
+
+      {/* Optional fields */}
+      <div className="space-y-3">
+        {addons.message && (
+          <div>
+            <label className="text-base font-semibold text-charcoal">Message for the card</label>
+            <textarea
+              value={cardMessage}
+              onChange={(e) => setCardMessage(e.target.value)}
+              rows={2}
+              className="mt-2 w-full rounded-xl border border-line bg-cream px-4 py-3 text-base text-charcoal"
+              placeholder="Your message..."
+            />
+          </div>
+        )}
+        <div>
+          <label className="text-base font-semibold text-charcoal">When do you need it? (optional)</label>
+          <input
+            type="date"
+            value={neededBy}
+            onChange={(e) => setNeededBy(e.target.value)}
+            className="mt-2 w-full rounded-xl border border-line bg-cream px-4 py-3 text-base text-charcoal"
+          />
         </div>
       </div>
 
