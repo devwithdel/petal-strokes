@@ -6,7 +6,7 @@ import { Modal } from '../components/ui/Modal'
 import { Toast } from '../components/ui/Toast'
 import { useToast } from '../hooks/useToast'
 import { useReveal } from '../hooks/useReveal'
-import { BOUQUETS, FAQ, RIBBON_COLORS, SIZES, SITE } from '../data/catalog'
+import { BOUQUETS, FAQ, RIBBON_COLORS, SIZES, SITE, TESTIMONIALS } from '../data/catalog'
 import { BouquetCard } from '../components/BouquetCard'
 import { InquiryPanel } from '../components/InquiryPanel'
 
@@ -186,6 +186,33 @@ export default function Home() {
                 {openFaq === i && (
                   <p className="px-5 pb-4 text-sm text-charcoal-soft">{item.a}</p>
                 )}
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Testimonials */}
+      <section className="bg-cream/40 py-16 sm:py-20">
+        <Container>
+          <div className="reveal text-center">
+            <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">Kind words</p>
+            <h2 className="mt-2 font-script text-4xl sm:text-5xl text-charcoal">From our customers</h2>
+          </div>
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {TESTIMONIALS.map((t) => (
+              <div key={t.name} className="reveal rounded-2xl bg-cream p-6 shadow-soft">
+                <div className="flex items-center gap-3">
+                  {t.photo ? (
+                    <img src={t.photo} alt={t.name} className="h-10 w-10 rounded-full object-cover" />
+                  ) : (
+                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-blush text-sm font-semibold text-rose-text">
+                      {t.initials}
+                    </span>
+                  )}
+                  <p className="font-medium text-charcoal">{t.name}</p>
+                </div>
+                <p className="mt-3 text-sm text-charcoal-soft">“{t.quote}”</p>
               </div>
             ))}
           </div>
