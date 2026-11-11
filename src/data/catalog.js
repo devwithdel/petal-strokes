@@ -36,10 +36,11 @@ export const story = {
 }
 
 // CONFIRM WITH OWNER: review these highlight labels.
+// Icon key maps to an inline SVG in Home.jsx.
 export const STORY_HIGHLIGHTS = [
-  { icon: '✿', label: 'Handmade by hand, petal by petal' },
-  { icon: '📍', label: 'Made to order in Ozamiz City' },
-  { icon: '🎨', label: 'Colors and add-ons your way' },
+  { icon: 'rose', label: 'Handmade, petal by petal' },
+  { icon: 'pin', label: 'Made to order in Ozamiz City' },
+  { icon: 'bow', label: 'Colors and add-ons your way' },
 ]
 
 // Add real customer feedback here. Leave empty to hide the section.

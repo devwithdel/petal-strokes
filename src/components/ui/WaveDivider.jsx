@@ -1,4 +1,4 @@
-export function WaveDivider({ flip = false, color = '#F0CFCF' }) {
+export function WaveDivider({ flip = false }) {
   return (
     <div className={`bg-transparent w-full ${flip ? 'rotate-180' : ''}`} aria-hidden="true" style={{ marginBottom: '-1px' }}>
       <svg viewBox="0 0 1440 80" preserveAspectRatio="none" shapeRendering="geometricPrecision" className="block w-full h-[60px] sm:h-[100px]">

@@ -18,6 +18,31 @@ export default function Home() {
   const [openFaq, setOpenFaq] = useState(0)
   const { toast, show } = useToast()
 
+  const STORY_ICONS = {
+    rose: ({ size = 28, className = '' }) => (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+        <circle cx="12" cy="12" r="2" />
+        <path d="M12 4a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2a2 2 0 0 1-2-2v-1a2 2 0 0 1 2-2Z" />
+        <path d="M20 12a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2Z" />
+        <path d="M12 20a2 2 0 0 1-2-2v-1a2 2 0 0 1 2-2a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2Z" />
+        <path d="M4 12a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2Z" />
+      </svg>
+    ),
+    pin: ({ size = 28, className = '' }) => (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+        <path d="M11 2a3 3 0 0 0-3 3a7 7 0 0 0 3 8a7 7 0 0 0 3-8a3 3 0 0 0-3-3Z" />
+        <circle cx="11" cy="8" r="1" />
+      </svg>
+    ),
+    bow: ({ size = 28, className = '' }) => (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+        <path d="M12 8c-2.21 0-4 1.79-4 4v1c0 2.21 1.79 4 4 4s4-1.79 4-4v-1c0-2.21-1.79-4-4-4Z" />
+        <path d="M8 12c0-1.1-0.89-2-2-2h-1c-1.1 0-2 0.89-2 2s0.89 2 2 2h1c1.1 0 2-0.89 2-2Z" />
+        <path d="M16 12c0-1.1 0.89-2 2-2h1c1.1 0 2 0.89 2 2s-0.89 2-2 2h-1c-1.1 0-2-0.89-2-2Z" />
+      </svg>
+    ),
+  }
+
   const ctaButton =
     "inline-flex flex-row items-center justify-center gap-[10px] text-center h-[52px] px-[24px] rounded-full whitespace-nowrap flex-[0_0_auto] min-w-[180px] sm:w-[200px] max-w-[320px] mx-auto sm:mx-0 border-2 border-rose-deep bg-cream text-base font-medium text-rose-text transition-all duration-200 hover:bg-blush hover:-translate-y-2 hover:shadow-soft focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-3"
 
@@ -170,13 +195,18 @@ export default function Home() {
               <p key={i} className={`mt-4 ${i === 0 ? 'text-lg' : 'text-base'} text-body`}>{para}</p>
             ))}
             {/* Highlights */}
-            <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
-              {STORY_HIGHLIGHTS.map((h) => (
-                <div key={h.label} className="flex flex-col items-center gap-2">
-                  <span className="text-2xl" aria-hidden="true">{h.icon}</span>
-                  <span className="text-sm text-body">{h.label}</span>
-                </div>
-              ))}
+            <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-3">
+              {STORY_HIGHLIGHTS.map((h) => {
+                const Icon = STORY_ICONS[h.icon]
+                return (
+                  <div key={h.label} className="flex flex-col items-center gap-3">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[rgba(251,247,240,0.45)] border border-[rgba(122,46,60,0.2)]">
+                      <Icon size={28} className="text-rose-text" />
+                    </div>
+                    <span className="w-full text-center text-[15px] font-medium text-body">{h.label}</span>
+                  </div>
+                )
+              })}
             </div>
           </div>
           {storyOk && (
