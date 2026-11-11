@@ -81,6 +81,13 @@
   0%, 100% { transform: translateY(0) rotate(-3deg); }
   50% { transform: translateY(-14px) rotate(-3deg); }
 }
+@keyframes pageFade {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.page-fade {
+  animation: pageFade 0.4s ease-out;
+}
 @keyframes hoverLift {
   0% { transform: translateY(0); }
   100% { transform: translateY(-6px); }
@@ -150,4 +157,5 @@ html.js-ready .reveal.is-visible {
   .card-lift, .card-lift:hover { transform: none; transition: none; }
   .light-beam { animation: none; }
   .float-bouquet { animation: none; transform: rotate(-3deg); }
+  .page-fade { animation: none; }
 }
