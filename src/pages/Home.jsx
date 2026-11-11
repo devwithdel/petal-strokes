@@ -33,7 +33,8 @@ export default function Home() {
               <h1 className="sr-only">{SITE.name}</h1>
               <img
                 src="/petal-strokes-wordmark.png"
-                alt={SITE.name}
+                alt=""
+                aria-hidden="true"
                 width="420"
                 height="120"
                 fetchPriority="high"
