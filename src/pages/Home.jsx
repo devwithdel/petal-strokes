@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <div ref={ref}>
       {/* Hero */}
-      <section className="relative flex min-h-[80vh] items-center overflow-hidden">
+      <section className="relative flex min-h-[80vh] items-center overflow-hidden section-pad">
         <div className="light-beam -top-24 -right-10" />
         <Container className="relative py-12 sm:py-16">
           <div className="grid items-center gap-10 lg:grid-cols-2">
@@ -90,7 +90,7 @@ export default function Home() {
 
       <WaveDivider />
       {/* Price strip */}
-      <section className="section-veil py-10 sm:py-12">
+      <section className="section-veil section-pad">
         <Container>
           <div className="reveal text-center">
             <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">Starting at ₱180</p>
@@ -119,7 +119,7 @@ export default function Home() {
       <WaveDivider flip />
 
       {/* Order / Build your bouquet */}
-      <section id="order" className="section-veil py-16 sm:py-20">
+      <section id="order" className="section-veil section-pad">
         <Container>
           <div className="reveal text-center">
             <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">Build your bouquet</p>
@@ -137,7 +137,7 @@ export default function Home() {
       </section>
 
       {/* Brand story */}
-      <section className="py-16 sm:py-20">
+      <section className="section-pad">
         <Container size={storyOk ? 'md' : 'sm'}>
           {storyOk ? (
             <div className="grid gap-8 md:grid-cols-2 md:items-center">
@@ -176,7 +176,7 @@ export default function Home() {
 
 
       {/* FAQ */}
-      <section className="section-veil py-16 sm:py-20">
+      <section className="section-veil section-pad">
         <Container size="md">
           <div className="reveal text-center">
             <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">Good to know</p>
@@ -204,7 +204,7 @@ export default function Home() {
 
       {/* Testimonials */}
       {TESTIMONIALS.length > 0 && (
-        <section className="section-veil py-16 sm:py-20">
+        <section className="section-veil section-pad">
           <Container>
             <div className="reveal text-center">
               <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">Kind words</p>
@@ -242,7 +242,7 @@ export default function Home() {
       )}
 
       {/* Message us */}
-      <section id="message-us" className="py-16 sm:py-20">
+      <section id="message-us" className="section-pad">
         <Container size="md" className="text-center">
           <div className="reveal">
             <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">Ordering</p>

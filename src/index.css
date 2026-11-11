@@ -39,6 +39,7 @@
   --shadow-soft: 0 6px 24px -10px rgba(43, 43, 43, 0.18);
   --shadow-card: 0 12px 36px -14px rgba(184, 92, 107, 0.28);
   --shadow-lift: 0 20px 48px -16px rgba(184, 92, 107, 0.35);
+  --section-space: clamp(64px, 9vw, 112px);
 }
 
 @layer base {
@@ -103,6 +104,11 @@
   background: rgba(251, 247, 240, 0.32);
   -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 100px, #000 calc(100% - 100px), transparent 100%);
   mask-image: linear-gradient(to bottom, transparent 0, #000 100px, #000 calc(100% - 100px), transparent 100%);
+}
+
+.section-pad {
+  padding-top: var(--section-space);
+  padding-bottom: var(--section-space);
 }
 @keyframes hoverLift {
   0% { transform: translateY(0); }
