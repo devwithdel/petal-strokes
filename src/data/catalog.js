@@ -20,8 +20,8 @@ export const FAQ = [
     a: 'Yes! Custom ribbon colors, messages, and add-ons are welcome — just tell us in your message.',
   },
   {
-    q: 'How do I care for satin roses?',
-    a: 'They never wilt! Keep them dry and out of direct sun; gently dust to keep them pretty.', // CONFIRM WITH OWNER
+    q: 'How do I care for my bouquet?', // CONFIRM WITH OWNER
+    a: 'Keep it away from direct sunlight, moisture, and heat, and dust it gently with a soft brush. We\'re happy to share tips for your specific bouquet in chat.', // CONFIRM WITH OWNER
   },
 ]
 
