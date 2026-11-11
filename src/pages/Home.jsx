@@ -51,7 +51,7 @@ export default function Home() {
               <div className="float-bouquet relative h-[420px] w-full max-w-md -rotate-3">
                 {heroOk ? (
                   <img
-                    src="/images/hero-bouquet.png"
+                    src="/images/hero-bouquet.webp"
                     alt="A handmade satin ribbon rose bouquet"
                     width="480"
                     height="600"
