@@ -60,12 +60,15 @@ export const COLOR_IMAGES = {
   cream: '/images/bouquet-cream.webp',
 }
 
+// CONFIRM WITH OWNER: review the tagline and ordering text.
 export const SITE = {
   name: 'Petal Strokes',
   tagline: 'Handmade satin ribbon rose bouquets, made with love in Ozamiz City.',
   city: 'Ozamiz City, Philippines',
-  instagram: { handle: '@petalstroke_8', dm: 'https://www.instagram.com/petalstroke_8', url: 'https://www.instagram.com/petalstroke_8' },
+  orderingText: 'Orders are made to order and handled by private message.',
+  instagram: { handle: '@petalstroke_8', dm: 'https://ig.me/m/petalstroke_8', url: 'https://ig.me/m/petalstroke_8' },
   tiktok: { handle: '@petalstrokes6', url: 'https://www.tiktok.com/@petalstrokes6' },
+  // CONFIRM WITH OWNER: review the Facebook link.
   facebook: { handle: 'Petal Strokes', dm: 'https://www.facebook.com/profile.php?id=61593725474100', url: 'https://www.facebook.com/profile.php?id=61593725474100' },
 }
 
