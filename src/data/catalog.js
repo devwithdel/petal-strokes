@@ -42,9 +42,6 @@ export const STORY_HIGHLIGHTS = [
   { icon: '🎨', label: 'Colors and add-ons your way' },
 ]
 
-// CONFIRM WITH OWNER: review this reassuring line.
-export const REPLY_TIME = "We usually reply within a day."
-
 // Add real customer feedback here. Leave empty to hide the section.
 // Shape: { name, initials, quote, photo?, screenshot? }
 export const TESTIMONIALS = []

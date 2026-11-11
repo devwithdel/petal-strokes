@@ -5,7 +5,7 @@ import { Button } from '../components/ui/Button'
 import { Toast } from '../components/ui/Toast'
 import { useToast } from '../hooks/useToast'
 import { useReveal } from '../hooks/useReveal'
-import { FAQ, REPLY_TIME, SIZES, SITE, STORY_HIGHLIGHTS, story as STORY, TESTIMONIALS } from '../data/catalog'
+import { FAQ, SIZES, SITE, STORY_HIGHLIGHTS, story as STORY, TESTIMONIALS } from '../data/catalog'
 import { TikTokIcon } from '../components/ui/BrandIcons'
 
 import { InquiryPanel } from '../components/InquiryPanel'
@@ -282,7 +282,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex w-full sm:w-auto h-[52px] min-w-[180px] items-center justify-center gap-2 rounded-full bg-rose-deep px-6 text-base font-medium text-cream transition hover:bg-charcoal focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
-              aria-label="Instagram"
+              aria-label={`Message Petal Strokes on Instagram, ${SITE.instagram.handle}`}
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
@@ -296,16 +296,12 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex w-full sm:w-auto h-[52px] min-w-[180px] items-center justify-center gap-2 rounded-full border-2 border-rose-deep bg-cream px-6 text-base font-medium text-rose-text transition hover:bg-rose-deep hover:text-cream focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
-              aria-label="TikTok"
+              aria-label={`Message Petal Strokes on TikTok, ${SITE.tiktok.handle}`}
             >
               <TikTokIcon size={20} />
               TikTok
             </a>
           </div>
-          <p className="mt-6 text-sm text-body">
-            {SITE.instagram.handle} on Instagram · {SITE.tiktok.handle} on TikTok
-          </p>
-          <p className="mt-3 text-sm text-body">{REPLY_TIME}</p>
           <p className="mt-6 text-sm text-body">
             <a
               href="#order"
