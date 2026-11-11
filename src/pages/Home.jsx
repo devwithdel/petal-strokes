@@ -110,7 +110,7 @@ export default function Home() {
 
       {/* Order / Build your bouquet */}
       <section id="order" className="py-16 sm:py-20">
-        <Container size="md">
+        <Container>
           <div className="reveal text-center">
             <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">Build your bouquet</p>
             <h2 className="mt-2 font-script text-4xl sm:text-5xl text-charcoal">Create your order message</h2>
@@ -118,8 +118,29 @@ export default function Home() {
               Choose your size, ribbon color and add-ons. We'll generate a ready-to-send message for you.
             </p>
           </div>
-          <div className="mt-8 rounded-2xl bg-cream p-6 shadow-soft sm:p-8">
-            <InquiryPanel bouquet={{ name: 'satin ribbon rose bouquet' }} onToast={show} />
+          <div className="mt-8 grid gap-8 lg:grid-cols-2">
+            <div className="lg:sticky lg:top-24 lg:self-start">
+              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-blush/40 shadow-card">
+                <img
+                  src="/images/hero-bouquet.webp"
+                  alt="Satin ribbon rose bouquet preview"
+                  width="480"
+                  height="600"
+                  className="h-full w-full object-cover"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none'
+                    const fb = e.currentTarget.parentElement?.querySelector('.img-fallback')
+                    if (fb) fb.style.display = 'flex'
+                  }}
+                />
+                <div className="img-fallback absolute inset-0 hidden items-center justify-center bg-gradient-to-br from-blush via-rose-peach to-rose">
+                  <span className="font-script text-4xl text-rose-text/70">Petal Strokes</span>
+                </div>
+              </div>
+            </div>
+            <div className="rounded-2xl bg-cream p-6 shadow-soft sm:p-8">
+              <InquiryPanel onToast={show} />
+            </div>
           </div>
         </Container>
       </section>
