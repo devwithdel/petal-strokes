@@ -1,30 +1,37 @@
+import { useState } from 'react'
 import { FOOTER, SITE } from '../../data/catalog'
 import { SocialIcon } from '../ui/SocialIcon'
 
 export function Footer() {
+  const [logoLoaded, setLogoLoaded] = useState(false)
   return (
     <footer className="bg-gradient-to-b from-[#F0CFCF] to-[#E8BFC3]">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-10 sm:grid-cols-3 lg:grid-cols-4 pt-16 pb-12">
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-3 mb-4">
-              <img
-                src="/images/petal-strokes-emblem.png"
-                alt=""
-                width="64"
-                height="64"
-                className="h-16 w-16 object-contain"
-                aria-hidden="true"
-                onError={(e) => { e.currentTarget.style.display = 'none' }}
-              />
-              <img
-                src="/images/petal-strokes-wordmark.png"
-                alt={SITE.name}
-                width="140"
-                height="auto"
-                className="h-auto w-[140px] object-contain"
-                onError={(e) => { e.currentTarget.style.display = 'none' }}
-              />
+            <div className="flex flex-col items-start gap-3 mb-4">
+              <div className="flex items-center gap-3">
+                <img
+                  src="/images/petal-strokes-emblem.png"
+                  alt=""
+                  width="64"
+                  height="64"
+                  className="h-16 w-16 object-contain"
+                  aria-hidden="true"
+                  onLoad={() => setLogoLoaded(true)}
+                  onError={(e) => { e.currentTarget.style.display = 'none' }}
+                />
+                <img
+                  src="/images/petal-strokes-wordmark.png"
+                  alt={SITE.name}
+                  width="140"
+                  height="auto"
+                  className="h-auto w-[140px] object-contain"
+                  onLoad={() => setLogoLoaded(true)}
+                  onError={(e) => { e.currentTarget.style.display = 'none' }}
+                />
+                {!logoLoaded && <span className="font-script text-3xl text-charcoal">Petal Strokes</span>}
+              </div>
             </div>
             <p className="text-sm text-body leading-relaxed">{SITE.tagline}</p>
           </div>
