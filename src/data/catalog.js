@@ -35,6 +35,13 @@ export const story = {
   ],
 }
 
+// CONFIRM WITH OWNER: review these highlight labels.
+export const STORY_HIGHLIGHTS = [
+  { icon: '✿', label: 'Handmade by hand, petal by petal' },
+  { icon: '📍', label: 'Made to order in Ozamiz City' },
+  { icon: '🎨', label: 'Colors and add-ons your way' },
+]
+
 // Add real customer feedback here. Leave empty to hide the section.
 // Shape: { name, initials, quote, photo?, screenshot? }
 export const TESTIMONIALS = []

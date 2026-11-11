@@ -6,7 +6,7 @@ import { Button } from '../components/ui/Button'
 import { Toast } from '../components/ui/Toast'
 import { useToast } from '../hooks/useToast'
 import { useReveal } from '../hooks/useReveal'
-import { BOUQUETS, COLOR_IMAGES, FAQ, SIZES, SITE, story as STORY, TESTIMONIALS } from '../data/catalog'
+import { BOUQUETS, COLOR_IMAGES, FAQ, SIZES, SITE, STORY_HIGHLIGHTS, story as STORY, TESTIMONIALS } from '../data/catalog'
 
 import { InquiryPanel } from '../components/InquiryPanel'
 
@@ -136,36 +136,49 @@ export default function Home() {
 
       {/* Brand story */}
       <section className="section-pad">
-        <Container size={storyOk ? 'md' : 'sm'}>
-          {storyOk ? (
-            <div className="grid gap-8 md:grid-cols-2 md:items-center">
-              <div className="reveal">
-                <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">{STORY.eyebrow}</p>
-                <h2 className="mt-2 font-script text-4xl sm:text-5xl text-charcoal">{STORY.heading}</h2>
-                {STORY.body.map((para, i) => (
-                  <p key={i} className="mt-4 text-base text-body">{para}</p>
-                ))}
-              </div>
-              <div className="reveal">
-                <img
-                  src="/images/story.webp"
-                  alt="Petal Strokes story"
-                  loading="lazy"
-                  decoding="async"
-                  width="700"
-                  height="700"
-                  className="aspect-square w-full rounded-2xl object-cover shadow-card"
-                  onError={() => setStoryOk(false)}
-                />
-              </div>
+        <Container>
+          <div className="reveal mx-auto max-w-[620px] text-center">
+            {/* Ornament */}
+            <div className="mb-4 flex items-center justify-center gap-3">
+              <span className="h-px w-12 bg-rose-text/40" />
+              <img
+                src="/images/petal-strokes-emblem.png"
+                alt=""
+                aria-hidden="true"
+                width="48"
+                height="48"
+                className="h-12 w-12 object-contain"
+                onError={(e) => { e.currentTarget.style.display = 'none' }}
+              />
+              <span className="h-px w-12 bg-rose-text/40" />
             </div>
-          ) : (
-            <div className="reveal mx-auto max-w-[640px] text-center">
-              <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">{STORY.eyebrow}</p>
-              <h2 className="mt-2 font-script text-4xl sm:text-5xl text-charcoal">{STORY.heading}</h2>
-              {STORY.body.map((para, i) => (
-                <p key={i} className="mt-4 text-base text-body">{para}</p>
+            <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">{STORY.eyebrow}</p>
+            <h2 className="mt-2 font-script text-4xl sm:text-5xl text-rose-text">{STORY.heading}</h2>
+            {STORY.body.map((para, i) => (
+              <p key={i} className={`mt-4 ${i === 0 ? 'text-lg' : 'text-base'} text-body`}>{para}</p>
+            ))}
+            {/* Highlights */}
+            <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
+              {STORY_HIGHLIGHTS.map((h) => (
+                <div key={h.label} className="flex flex-col items-center gap-2">
+                  <span className="text-2xl" aria-hidden="true">{h.icon}</span>
+                  <span className="text-sm text-body">{h.label}</span>
+                </div>
               ))}
+            </div>
+          </div>
+          {storyOk && (
+            <div className="reveal mx-auto mt-8 max-w-[620px]">
+              <img
+                src="/images/story.webp"
+                alt="Petal Strokes story"
+                loading="lazy"
+                decoding="async"
+                width="620"
+                height="400"
+                className="w-full rounded-2xl object-cover shadow-card"
+                onError={() => setStoryOk(false)}
+              />
             </div>
           )}
         </Container>
