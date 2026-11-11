@@ -134,14 +134,25 @@ export default function Home() {
               </p>
             </div>
             <div className="reveal">
-              <img
-                src="/images/bouquet-classic.jpg"
-                alt="A classic blush satin ribbon rose bouquet"
-                loading="lazy"
-                decoding="async"
-                className="aspect-square w-full rounded-2xl object-cover shadow-card"
-                onError={(e) => { e.currentTarget.style.opacity = '0.4' }}
-              />
+              <div className="relative aspect-square w-full overflow-hidden rounded-2xl shadow-card">
+                <img
+                  src="/images/bouquet-classic.jpg"
+                  alt="A classic blush satin ribbon rose bouquet"
+                  loading="lazy"
+                  decoding="async"
+                  width="700"
+                  height="700"
+                  className="h-full w-full object-cover"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none'
+                    const fb = e.currentTarget.parentElement?.querySelector('.img-fallback')
+                    if (fb) fb.style.display = 'flex'
+                  }}
+                />
+                <div className="img-fallback absolute inset-0 hidden items-center justify-center bg-gradient-to-br from-blush via-rose-peach to-rose">
+                  <span className="font-script text-4xl text-rose-text/70">Petal Strokes</span>
+                </div>
+              </div>
             </div>
           </div>
         </Container>
@@ -207,7 +218,7 @@ export default function Home() {
               <div key={t.name} className="reveal rounded-2xl bg-cream p-6 shadow-soft">
                 <div className="flex items-center gap-3">
                   {t.photo ? (
-                    <img src={t.photo} alt={t.name} loading="lazy" decoding="async" className="h-10 w-10 rounded-full object-cover" />
+                    <img src={t.photo} alt={t.name} loading="lazy" decoding="async" width="40" height="40" className="h-10 w-10 rounded-full object-cover" onError={(e) => { e.currentTarget.style.display = 'none' }} />
                   ) : (
                     <span className="flex h-10 w-10 items-center justify-center rounded-full bg-blush text-sm font-semibold text-rose-text">
                       {t.initials}
@@ -247,14 +258,25 @@ export default function Home() {
       <Modal open={!!active} onClose={() => setActive(null)} title={active?.name} size="lg">
         {active && (
           <div className="grid gap-6 p-6 md:grid-cols-2">
-            <img
-              src={active.image}
-              alt={active.alt}
-              loading="lazy"
-              decoding="async"
-              className="aspect-[4/5] w-full rounded-xl object-cover"
-              onError={(e) => { e.currentTarget.style.opacity = '0.4' }}
-            />
+            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl">
+              <img
+                src={active.image}
+                alt={active.alt}
+                loading="lazy"
+                decoding="async"
+                width="480"
+                height="600"
+                className="h-full w-full object-cover"
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none'
+                  const fb = e.currentTarget.parentElement?.querySelector('.img-fallback')
+                  if (fb) fb.style.display = 'flex'
+                }}
+              />
+              <div className="img-fallback absolute inset-0 hidden items-center justify-center bg-gradient-to-br from-blush via-rose-peach to-rose">
+                <span className="font-script text-4xl text-rose-text/70">Petal Strokes</span>
+              </div>
+            </div>
             <div>
               <h2 className="font-script text-4xl text-charcoal">{active.name}</h2>
               <p className="mt-2 text-charcoal-soft">{active.description}</p>
