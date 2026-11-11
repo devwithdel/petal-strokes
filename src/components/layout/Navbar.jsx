@@ -51,9 +51,15 @@ export function Navbar() {
               }}
             />
           </span>
-          <span className="whitespace-nowrap font-script text-3xl leading-none text-charcoal">
-            Petal Strokes
-          </span>
+          <img
+            src="/images/petal-strokes-wordmark.png"
+            alt=""
+            aria-hidden="true"
+            width="751"
+            height="423"
+            className="hidden h-[30px] w-auto sm:h-[36px] sm:block object-contain"
+            onError={(e) => { e.currentTarget.style.display = 'none' }}
+          />
         </Link>
 
         <nav aria-label="Main" className="hidden items-center gap-1 md:flex">
