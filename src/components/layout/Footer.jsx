@@ -8,25 +8,25 @@ export function Footer() {
           <div>
             <img src="/images/logo.png" alt={SITE.name} className="h-12 w-auto" onError={(e) => { e.currentTarget.style.display = 'none' }} />
             <p className="mt-2 font-script text-2xl text-charcoal">{SITE.name}</p>
-            <p className="mt-2 text-sm text-muted">{SITE.tagline}</p>
-            <p className="mt-1 text-xs text-muted">{SITE.city}</p>
+            <p className="mt-2 text-sm text-body">{SITE.tagline}</p>
+            <p className="mt-1 text-xs text-body">{SITE.city}</p>
           </div>
           <div>
             <p className="text-sm font-semibold text-charcoal">Find us</p>
-            <ul className="mt-2 space-y-1 text-sm text-muted">
+            <ul className="mt-2 space-y-1 text-sm text-body">
               <li>Instagram {SITE.instagram.handle}</li>
               <li>TikTok {SITE.tiktok.handle}</li>
             </ul>
           </div>
           <div>
             <p className="text-sm font-semibold text-charcoal">Ordering</p>
-            <p className="mt-2 text-sm text-muted">
+            <p className="mt-2 text-sm text-body">
               Orders are handled by private message. Browse, then message us to
               place your order.
             </p>
           </div>
         </div>
-        <p className="mt-8 text-xs text-muted">
+        <p className="mt-8 text-xs text-body">
           © {new Date().getFullYear()} {SITE.name}. Handmade with love.
         </p>
       </div>
