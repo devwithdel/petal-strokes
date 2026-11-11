@@ -73,7 +73,15 @@ export default function Home() {
                     aria-hidden="true"
                     className="flex h-full w-full items-center justify-center rounded-3xl bg-gradient-to-br from-blush via-rose-peach to-rose shadow-card"
                   >
-                    <span className="font-script text-6xl text-rose-text/70">Petal Strokes</span>
+                    <img
+                      src="/images/petal-strokes-emblem.png"
+                      alt=""
+                      aria-hidden="true"
+                      width="160"
+                      height="160"
+                      className="h-40 w-40 object-contain"
+                      onError={(e) => { e.currentTarget.style.display = 'none' }}
+                    />
                   </div>
                 )}
               </div>
