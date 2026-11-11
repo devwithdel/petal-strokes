@@ -20,9 +20,9 @@ export default function Home() {
   return (
     <div ref={ref}>
       {/* Hero */}
-      <section className="relative overflow-hidden">
+      <section className="relative flex min-h-[80vh] items-center overflow-hidden">
         <div className="light-beam -top-24 -right-10" />
-        <Container className="relative py-16 sm:py-24 lg:py-28">
+        <Container className="relative py-12 sm:py-16">
           <div className="grid items-center gap-10 lg:grid-cols-2">
             <div>
               <p className="reveal text-sm font-medium uppercase tracking-[0.25em] text-rose-text">
@@ -68,11 +68,18 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className="mt-8 flex justify-center">
+            <a href="#featured" aria-label="Scroll to content" className="motion-reduce:animate-none animate-bounce text-rose-text/70">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </a>
+          </div>
         </Container>
       </section>
 
       {/* Featured */}
-      <section className="py-16 sm:py-20">
+      <section id="featured" className="py-16 sm:py-20">
         <Container>
           <div className="reveal">
             <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">Featured</p>
