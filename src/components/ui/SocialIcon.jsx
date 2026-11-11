@@ -12,14 +12,14 @@ export function SocialIcon({ platform, url, handle, ariaLabel }) {
     if (name === 'tiktok') {
       return (
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path d="M12 3v4.4a4 4 0 0 0-.8 2.4l-1.4 2.2a4 4 0 0 0-.3 2.4v2c0 .6.4 1 1 1h6.4a1 1 0 0 0 1-1V12a4 4 0 0 0-.3-2.4l-1.4-2.2A4 4 0 0 0 12 7.4V3z" />
+          <path d="M22 12c0 4.7-4.3 8.6-9 8.6s-9-3.9-9-8.6c0-4.2 3.4-7.7 7.7-7.7 1.6 0 3 0.5 4.2 1.3L9.4 6.5c-1.4-1-3.1-1.7-4.9-1.7C1.4 4.8 0 6.2 0 7.7c0 1.2.3 2.4 1 3.3l3.6-5.4c-1-1.2-1.5-2.7-1.5-4.3 0-3.3 2.7-6 6-6s6 2.7 6 6c0 1.6-.5 3.1-1.5 4.3L21 11c0.7-0.9 1-2.1 1-3.3 0-1.5-1.4-2.9-2.9-2.9z" />
         </svg>
       )
     }
     if (name === 'facebook') {
       return (
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8v-4h-4V4h4V2z" />
+          <path d="M12 0c-6.6 0-12 5.4-12 12 0 2 0.2 3.9 0.5 5.8H2v7h4v-2h4v-2h4v2h4v-7h-4v-2c0-2.5 0.9-4.9 3.7-4.9 1.8 0 2.3 0.1 2.5 0.2V3h-2c-2 0-3 1-3 3v2z" />
         </svg>
       )
     }
