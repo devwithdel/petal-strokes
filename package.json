@@ -1,7 +1,9 @@
 {
   "name": "petal-strokes",
   "private": true,
-  "engines": { "node": ">=20" },
+  "engines": {
+    "node": ">=20"
+  },
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -11,6 +13,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "lucide-react": "^1.72.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "react-router-dom": "^7.18.5"
