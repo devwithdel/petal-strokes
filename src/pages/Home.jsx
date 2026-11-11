@@ -21,23 +21,38 @@ export default function Home() {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="light-beam -top-24 -right-10" />
-        <Container className="relative py-20 sm:py-28 lg:py-36">
-          <p className="reveal text-sm font-medium uppercase tracking-[0.25em] text-rose-deep">
-            Handmade satin ribbon roses · Ozamiz City
-          </p>
-          <h1 className="reveal mt-4 font-script text-6xl sm:text-7xl lg:text-8xl text-charcoal">
-            {SITE.name}
-          </h1>
-          <p className="reveal mt-4 max-w-xl text-lg text-charcoal-soft">
-            {SITE.tagline}
-          </p>
-          <div className="reveal mt-8 flex flex-wrap gap-3">
-            <Link to="/gallery">
-              <Button size="lg">Explore bouquets</Button>
-            </Link>
-            <a href="#message-us">
-              <Button variant="outline" size="lg">Message us</Button>
-            </a>
+        <Container className="relative py-16 sm:py-24 lg:py-28">
+          <div className="grid items-center gap-10 lg:grid-cols-2">
+            <div>
+              <p className="reveal text-sm font-medium uppercase tracking-[0.25em] text-rose-text">
+                Handmade satin ribbon roses · Ozamiz City
+              </p>
+              <h1 className="reveal mt-4 font-script text-6xl sm:text-7xl lg:text-8xl text-charcoal">
+                {SITE.name}
+              </h1>
+              <p className="reveal mt-4 max-w-xl text-lg text-body">
+                {SITE.tagline}
+              </p>
+              <div className="reveal mt-8 flex flex-wrap gap-3">
+                <Link to="/gallery">
+                  <Button size="lg">Explore bouquets</Button>
+                </Link>
+                <a
+                  href="#message-us"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-rose-deep bg-cream px-7 py-3.5 text-base font-medium text-rose-deep transition-all duration-200 hover:bg-rose-deep hover:text-cream"
+                >
+                  Message us
+                </a>
+              </div>
+            </div>
+            <div className="reveal flex justify-center lg:justify-end">
+              <img
+                src="/images/hero-bouquet.png"
+                alt="A handmade satin ribbon rose bouquet"
+                className="float-bouquet h-auto w-full max-w-md -rotate-3 rounded-3xl object-contain"
+                onError={(e) => { e.currentTarget.style.opacity = '0.35' }}
+              />
+            </div>
           </div>
         </Container>
       </section>

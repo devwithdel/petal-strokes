@@ -13,19 +13,21 @@ export function Navbar() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-40 border-b border-line/60 bg-cream/70 backdrop-blur-md">
+    <header className="sticky top-0 z-40 bg-cream/60 backdrop-blur-md shadow-[0_4px_20px_-12px_rgba(122,46,60,0.25)]">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center" aria-label="Petal Strokes home">
-          <img
-            src="/logo.png"
-            alt="Petal Strokes"
-            className="h-10 w-auto sm:h-12"
-            onError={(e) => {
-              e.currentTarget.style.display = 'none'
-              const fallback = e.currentTarget.nextElementSibling
-              if (fallback) fallback.style.display = 'block'
-            }}
-          />
+          <span className="flex h-11 w-11 items-center justify-center rounded-full bg-cream shadow-soft sm:h-12 sm:w-12">
+            <img
+              src="/logo.png"
+              alt="Petal Strokes"
+              className="h-8 w-8 object-contain sm:h-9 sm:w-9"
+              onError={(e) => {
+                e.currentTarget.style.display = 'none'
+                const fallback = e.currentTarget.parentElement?.nextElementSibling
+                if (fallback) fallback.style.display = 'block'
+              }}
+            />
+          </span>
           <span className="hidden font-script text-3xl text-charcoal">Petal Strokes</span>
         </Link>
         <nav className="hidden items-center gap-1 md:flex">
