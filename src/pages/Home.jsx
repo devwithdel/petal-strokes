@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { Container } from '../components/ui/Container'
 import { WaveDivider } from '../components/ui/WaveDivider'
 import { Button } from '../components/ui/Button'
-import { Modal } from '../components/ui/Modal'
 import { Toast } from '../components/ui/Toast'
 import { useToast } from '../hooks/useToast'
 import { useReveal } from '../hooks/useReveal'
@@ -13,7 +12,6 @@ import { InquiryPanel } from '../components/InquiryPanel'
 
 export default function Home() {
   const ref = useReveal()
-  const [active, setActive] = useState(null)
   const [heroOk, setHeroOk] = useState(true)
   const [openFaq, setOpenFaq] = useState(0)
   const { toast, show } = useToast()
@@ -109,6 +107,22 @@ export default function Home() {
       </section>
 
       <WaveDivider flip />
+
+      {/* Order / Build your bouquet */}
+      <section id="order" className="py-16 sm:py-20">
+        <Container size="md">
+          <div className="reveal text-center">
+            <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">Build your bouquet</p>
+            <h2 className="mt-2 font-script text-4xl sm:text-5xl text-charcoal">Create your order message</h2>
+            <p className="mt-3 text-charcoal-soft">
+              Choose your size, ribbon color and add-ons. We'll generate a ready-to-send message for you.
+            </p>
+          </div>
+          <div className="mt-8 rounded-2xl bg-cream p-6 shadow-soft sm:p-8">
+            <InquiryPanel bouquet={{ name: 'satin ribbon rose bouquet' }} onToast={show} />
+          </div>
+        </Container>
+      </section>
 
       {/* Brand story */}
       <section className="py-16 sm:py-20">
@@ -255,38 +269,6 @@ export default function Home() {
         </Container>
       </section>
 
-      <Modal open={!!active} onClose={() => setActive(null)} title={active?.name} size="lg">
-        {active && (
-          <div className="grid gap-6 p-6 md:grid-cols-2">
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl">
-              <img
-                src={active.image}
-                alt={active.alt}
-                loading="lazy"
-                decoding="async"
-                width="480"
-                height="600"
-                className="h-full w-full object-cover"
-                onError={(e) => {
-                  e.currentTarget.style.display = 'none'
-                  const fb = e.currentTarget.parentElement?.querySelector('.img-fallback')
-                  if (fb) fb.style.display = 'flex'
-                }}
-              />
-              <div className="img-fallback absolute inset-0 hidden items-center justify-center bg-gradient-to-br from-blush via-rose-peach to-rose">
-                <span className="font-script text-4xl text-rose-text/70">Petal Strokes</span>
-              </div>
-            </div>
-            <div>
-              <h2 className="font-script text-4xl text-charcoal">{active.name}</h2>
-              <p className="mt-2 text-charcoal-soft">{active.description}</p>
-              <div className="mt-4">
-                <InquiryPanel bouquet={active} onToast={show} />
-              </div>
-            </div>
-          </div>
-        )}
-      </Modal>
       <Toast message={toast} />
     </div>
   )
