@@ -6,7 +6,8 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
         <div className="grid gap-8 sm:grid-cols-3">
           <div>
-            <p className="font-script text-2xl text-charcoal">{SITE.name}</p>
+            <img src="/logo.png" alt={SITE.name} className="h-12 w-auto" onError={(e) => { e.currentTarget.style.display = 'none' }} />
+            <p className="mt-2 font-script text-2xl text-charcoal">{SITE.name}</p>
             <p className="mt-2 text-sm text-muted">{SITE.tagline}</p>
             <p className="mt-1 text-xs text-muted">{SITE.city}</p>
           </div>

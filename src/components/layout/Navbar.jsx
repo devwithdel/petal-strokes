@@ -15,8 +15,18 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-40 border-b border-line/60 bg-cream/70 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        <Link to="/" className="font-script text-3xl text-charcoal">
-          Petal Strokes
+        <Link to="/" className="flex items-center" aria-label="Petal Strokes home">
+          <img
+            src="/logo.png"
+            alt="Petal Strokes"
+            className="h-10 w-auto sm:h-12"
+            onError={(e) => {
+              e.currentTarget.style.display = 'none'
+              const fallback = e.currentTarget.nextElementSibling
+              if (fallback) fallback.style.display = 'block'
+            }}
+          />
+          <span className="hidden font-script text-3xl text-charcoal">Petal Strokes</span>
         </Link>
         <nav className="hidden items-center gap-1 md:flex">
           {links.map((l) => (
