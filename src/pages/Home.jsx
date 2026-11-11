@@ -44,20 +44,20 @@ export default function Home() {
               <p className="reveal mt-4 max-w-xl text-lg text-body">
                 {SITE.tagline}
               </p>
-              <div className="reveal mt-8 flex flex-wrap gap-3">
-                <Button size="lg" onClick={() => document.getElementById('order')?.scrollIntoView({ behavior: 'smooth' })}>
+              <div className="reveal mt-8 flex flex-col sm:flex-row flex-wrap gap-3 w-full">
+                <Button size="lg" className="w-full sm:w-auto" onClick={() => document.getElementById('order')?.scrollIntoView({ behavior: 'smooth' })}>
                   Explore bouquets
                 </Button>
                 <a
                   href="#message-us"
-                  className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-rose-deep bg-cream px-7 py-3.5 text-base font-medium text-rose-deep transition-all duration-200 hover:bg-rose-deep hover:text-cream"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border-2 border-rose-deep bg-cream px-7 py-3.5 text-base font-medium text-rose-deep transition-all duration-200 hover:bg-rose-deep hover:text-cream"
                 >
                   Message us
                 </a>
               </div>
             </div>
-            <div className="reveal flex justify-center lg:justify-end">
-              <div className="float-bouquet relative max-h-[460px] w-full max-w-md -rotate-3">
+            <div className="reveal flex justify-center lg:justify-end overflow-hidden">
+              <div className="float-bouquet relative max-h-[460px] sm:max-h-[460px] w-full max-w-md -rotate-3 overflow-hidden">
                 {heroOk ? (
                   <img
                     src="/images/hero-bouquet.webp"
