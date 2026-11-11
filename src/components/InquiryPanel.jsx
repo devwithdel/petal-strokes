@@ -193,9 +193,7 @@ export function InquiryPanel({ size: sizeProp, onSizeChange, onToast, onColorCha
       {/* Actions */}
       <div className="flex flex-col gap-3">
         <Button size="lg" className="w-full" onClick={copy}>Copy message</Button>
-        <p className="text-xs text-muted">
-          Instagram and TikTok can't prefill messages, so paste the copied text into our DM.
-        </p>
+
       </div>
     </div>
   )
