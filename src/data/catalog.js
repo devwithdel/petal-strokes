@@ -5,15 +5,15 @@
 export const FAQ = [
   {
     q: 'How long does an order take?',
-    a: 'Usually 1–3 days depending on size and current queue. We confirm the timeline in chat.',
+    a: 'Usually 1–3 days depending on size and current queue. We confirm the timeline in chat.', // CONFIRM WITH OWNER
   },
   {
     q: 'Pickup or delivery in Ozamiz City?',
-    a: 'Both! Pick up from us in Ozamiz City, or arrange local delivery (fee depends on area).',
+    a: 'Both! Pick up from us in Ozamiz City, or arrange local delivery (fee depends on area).', // CONFIRM WITH OWNER
   },
   {
     q: 'What payment methods do you accept?',
-    a: 'GCash and Cash on Delivery (COD). We confirm details in chat before finalizing.',
+    a: 'GCash and Cash on Delivery (COD). We confirm details in chat before finalizing.', // CONFIRM WITH OWNER
   },
   {
     q: 'Can I request custom colors or a message?',
@@ -21,9 +21,19 @@ export const FAQ = [
   },
   {
     q: 'How do I care for satin roses?',
-    a: 'They never wilt! Keep them dry and out of direct sun; gently dust to keep them pretty.',
+    a: 'They never wilt! Keep them dry and out of direct sun; gently dust to keep them pretty.', // CONFIRM WITH OWNER
   },
 ]
+
+// CONFIRM WITH OWNER: review and edit this story text.
+export const STORY = {
+  eyebrow: 'Our story',
+  heading: 'Made by hand, sent with love.',
+  body: [
+    'Petal Strokes started as a small passion project — satin ribbon roses shaped petal by petal, each bouquet a little labour of love. No two are ever exactly alike.',
+    'We’d love to make something special for you. Browse, pick your colours, and send us a message to order.',
+  ],
+}
 
 // Add real customer feedback here. Leave empty to hide the section.
 // Shape: { name, initials, quote, photo?, screenshot? }

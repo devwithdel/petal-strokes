@@ -7,7 +7,7 @@ import { Modal } from '../components/ui/Modal'
 import { Toast } from '../components/ui/Toast'
 import { useToast } from '../hooks/useToast'
 import { useReveal } from '../hooks/useReveal'
-import { BOUQUETS, FAQ, RIBBON_COLORS, SIZES, SITE, TESTIMONIALS } from '../data/catalog'
+import { BOUQUETS, FAQ, RIBBON_COLORS, SIZES, SITE, STORY, TESTIMONIALS } from '../data/catalog'
 import { BouquetCard } from '../components/BouquetCard'
 import { InquiryPanel } from '../components/InquiryPanel'
 
@@ -124,17 +124,11 @@ export default function Home() {
         <Container size="md">
           <div className="grid gap-8 md:grid-cols-2 md:items-center">
             <div className="reveal">
-              <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">Our story</p>
-              <h2 className="mt-2 font-script text-4xl sm:text-5xl text-charcoal">Made by hand, sent with love.</h2>
-              <p className="mt-4 text-charcoal-soft">
-                Petal Strokes started as a small passion project — satin ribbon roses
-                shaped petal by petal, each bouquet a little labour of love. No two
-                are ever exactly alike.
-              </p>
-              <p className="mt-3 text-charcoal-soft">
-                We'd love to make something special for you. Browse, pick your
-                colours, and send us a message to order.
-              </p>
+              <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">{STORY.eyebrow}</p>
+              <h2 className="mt-2 font-script text-4xl sm:text-5xl text-charcoal">{STORY.heading}</h2>
+              {STORY.body.map((para, i) => (
+                <p key={i} className="mt-4 text-charcoal-soft">{para}</p>
+              ))}
             </div>
             <div className="reveal">
               <div className="relative aspect-square w-full overflow-hidden rounded-2xl shadow-card">
