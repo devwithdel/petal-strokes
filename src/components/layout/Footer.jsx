@@ -16,6 +16,7 @@ export function Footer() {
             <ul className="mt-2 space-y-1 text-sm text-body">
               <li>Instagram {SITE.instagram.handle}</li>
               <li>TikTok {SITE.tiktok.handle}</li>
+              <li>Facebook {SITE.facebook.handle}</li>
             </ul>
           </div>
           <div>
@@ -27,7 +28,7 @@ export function Footer() {
           </div>
         </div>
         <p className="mt-8 text-xs text-body">
-          © {new Date().getFullYear()} {SITE.name}. Handmade with love.
+          © {new Date().getFullYear()} {SITE.name}. All rights reserved.
         </p>
       </div>
     </footer>
