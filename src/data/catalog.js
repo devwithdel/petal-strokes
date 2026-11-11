@@ -39,6 +39,17 @@ export const STORY = {
 // Shape: { name, initials, quote, photo?, screenshot? }
 export const TESTIMONIALS = []
 
+// Optional per-color preview images. Falls back to hero-bouquet.webp when missing.
+export const COLOR_IMAGES = {
+  pink: '/images/bouquet-pink.webp',
+  yellow: '/images/bouquet-yellow.webp',
+  green: '/images/bouquet-green.webp',
+  red: '/images/bouquet-red.webp',
+  blue: '/images/bouquet-blue.webp',
+  purple: '/images/bouquet-purple.webp',
+  cream: '/images/bouquet-cream.webp',
+}
+
 export const SITE = {
   name: 'Petal Strokes',
   tagline: 'Handmade satin ribbon rose bouquets, made with love in Ozamiz City.',

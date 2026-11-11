@@ -6,13 +6,14 @@ import { Button } from '../components/ui/Button'
 import { Toast } from '../components/ui/Toast'
 import { useToast } from '../hooks/useToast'
 import { useReveal } from '../hooks/useReveal'
-import { BOUQUETS, FAQ, RIBBON_COLORS, SIZES, SITE, STORY, TESTIMONIALS } from '../data/catalog'
+import { BOUQUETS, COLOR_IMAGES, FAQ, RIBBON_COLORS, SIZES, SITE, STORY, TESTIMONIALS } from '../data/catalog'
 
 import { InquiryPanel } from '../components/InquiryPanel'
 
 export default function Home() {
   const ref = useReveal()
   const [heroOk, setHeroOk] = useState(true)
+  const [selectedColor, setSelectedColor] = useState(RIBBON_COLORS[0])
   const [openFaq, setOpenFaq] = useState(0)
   const { toast, show } = useToast()
 
@@ -122,15 +123,20 @@ export default function Home() {
             <div className="lg:sticky lg:top-24 lg:self-start">
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-blush/40 shadow-card">
                 <img
-                  src="/images/hero-bouquet.webp"
-                  alt="Satin ribbon rose bouquet preview"
+                  key={selectedColor.id}
+                  src={COLOR_IMAGES[selectedColor.id] || '/images/hero-bouquet.webp'}
+                  alt={`Satin ribbon rose bouquet in ${selectedColor.name}`}
                   width="480"
                   height="600"
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover transition-opacity duration-300"
                   onError={(e) => {
-                    e.currentTarget.style.display = 'none'
-                    const fb = e.currentTarget.parentElement?.querySelector('.img-fallback')
-                    if (fb) fb.style.display = 'flex'
+                    if (e.currentTarget.src.includes('hero-bouquet.webp')) {
+                      e.currentTarget.style.display = 'none'
+                      const fb = e.currentTarget.parentElement?.querySelector('.img-fallback')
+                      if (fb) fb.style.display = 'flex'
+                    } else {
+                      e.currentTarget.src = '/images/hero-bouquet.webp'
+                    }
                   }}
                 />
                 <div className="img-fallback absolute inset-0 hidden items-center justify-center bg-gradient-to-br from-blush via-rose-peach to-rose">
@@ -139,7 +145,7 @@ export default function Home() {
               </div>
             </div>
             <div className="rounded-2xl bg-cream p-6 shadow-soft sm:p-8">
-              <InquiryPanel onToast={show} />
+              <InquiryPanel onToast={show} onColorChange={setSelectedColor} />
             </div>
           </div>
         </Container>

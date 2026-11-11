@@ -1,11 +1,15 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import { SIZES, RIBBON_COLORS, ADDONS, SITE } from '../data/catalog'
 import { Button } from './ui/Button'
 
-export function InquiryPanel({ onToast }) {
+export function InquiryPanel({ onToast, onColorChange }) {
   const [size, setSize] = useState(SIZES[1])
   const [color, setColor] = useState(RIBBON_COLORS[0])
   const [addons, setAddons] = useState({})
+
+  useEffect(() => {
+    onColorChange?.(color)
+  }, [color, onColorChange])
 
   const toggleAddon = (id) => {
     setAddons((prev) => {
