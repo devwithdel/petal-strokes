@@ -25,26 +25,9 @@ export const FAQ = [
   },
 ]
 
-export const TESTIMONIALS = [
-  {
-    name: 'Maria L.',
-    initials: 'ML',
-    photo: null,
-    quote: 'The bouquet was even prettier in person. My mom cried happy tears!',
-  },
-  {
-    name: 'Jessa R.',
-    initials: 'JR',
-    photo: null,
-    quote: 'Super sulit and the colors were exactly what I asked for. Will order again.',
-  },
-  {
-    name: 'Mark D.',
-    initials: 'MD',
-    photo: null,
-    quote: 'Great for gifting — they never wilt, so it lasts forever.',
-  },
-]
+// Add real customer feedback here. Leave empty to hide the section.
+// Shape: { name, initials, quote, photo?, screenshot? }
+export const TESTIMONIALS = []
 
 export const SITE = {
   name: 'Petal Strokes',

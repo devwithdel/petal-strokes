@@ -207,31 +207,43 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="bg-cream/40 py-16 sm:py-20">
-        <Container>
-          <div className="reveal text-center">
-            <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">Kind words</p>
-            <h2 className="mt-2 font-script text-4xl sm:text-5xl text-charcoal">From our customers</h2>
-          </div>
-          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {TESTIMONIALS.map((t) => (
-              <div key={t.name} className="reveal rounded-2xl bg-cream p-6 shadow-soft">
-                <div className="flex items-center gap-3">
-                  {t.photo ? (
-                    <img src={t.photo} alt={t.name} loading="lazy" decoding="async" width="40" height="40" className="h-10 w-10 rounded-full object-cover" onError={(e) => { e.currentTarget.style.display = 'none' }} />
-                  ) : (
-                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-blush text-sm font-semibold text-rose-text">
-                      {t.initials}
-                    </span>
+      {TESTIMONIALS.length > 0 && (
+        <section className="bg-cream/40 py-16 sm:py-20">
+          <Container>
+            <div className="reveal text-center">
+              <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">Kind words</p>
+              <h2 className="mt-2 font-script text-4xl sm:text-5xl text-charcoal">From our customers</h2>
+            </div>
+            <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {TESTIMONIALS.map((t) => (
+                <div key={t.name} className="reveal rounded-2xl bg-cream p-6 shadow-soft">
+                  <div className="flex items-center gap-3">
+                    {t.photo ? (
+                      <img src={t.photo} alt={t.name} loading="lazy" decoding="async" width="40" height="40" className="h-10 w-10 rounded-full object-cover" onError={(e) => { e.currentTarget.style.display = 'none' }} />
+                    ) : (
+                      <span className="flex h-10 w-10 items-center justify-center rounded-full bg-blush text-sm font-semibold text-rose-text">
+                        {t.initials}
+                      </span>
+                    )}
+                    <p className="font-medium text-charcoal">{t.name}</p>
+                  </div>
+                  <p className="mt-3 text-sm text-charcoal-soft">“{t.quote}”</p>
+                  {t.screenshot && (
+                    <img
+                      src={t.screenshot}
+                      alt={`Screenshot from ${t.name}`}
+                      loading="lazy"
+                      decoding="async"
+                      className="mt-3 w-full rounded-xl object-cover"
+                      onError={(e) => { e.currentTarget.style.display = 'none' }}
+                    />
                   )}
-                  <p className="font-medium text-charcoal">{t.name}</p>
                 </div>
-                <p className="mt-3 text-sm text-charcoal-soft">“{t.quote}”</p>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
+              ))}
+            </div>
+          </Container>
+        </section>
+      )}
 
       {/* Message us */}
       <section id="message-us" className="bg-cream/60 py-16 sm:py-20">
