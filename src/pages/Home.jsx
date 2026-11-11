@@ -55,6 +55,7 @@ export default function Home() {
                     alt="A handmade satin ribbon rose bouquet"
                     width="480"
                     height="600"
+                    fetchPriority="high"
                     className="h-full w-full rounded-3xl object-contain"
                     onError={() => setHeroOk(false)}
                   />
@@ -136,6 +137,8 @@ export default function Home() {
               <img
                 src="/images/bouquet-classic.jpg"
                 alt="A classic blush satin ribbon rose bouquet"
+                loading="lazy"
+                decoding="async"
                 className="aspect-square w-full rounded-2xl object-cover shadow-card"
                 onError={(e) => { e.currentTarget.style.opacity = '0.4' }}
               />
@@ -204,7 +207,7 @@ export default function Home() {
               <div key={t.name} className="reveal rounded-2xl bg-cream p-6 shadow-soft">
                 <div className="flex items-center gap-3">
                   {t.photo ? (
-                    <img src={t.photo} alt={t.name} className="h-10 w-10 rounded-full object-cover" />
+                    <img src={t.photo} alt={t.name} loading="lazy" decoding="async" className="h-10 w-10 rounded-full object-cover" />
                   ) : (
                     <span className="flex h-10 w-10 items-center justify-center rounded-full bg-blush text-sm font-semibold text-rose-text">
                       {t.initials}
@@ -247,6 +250,8 @@ export default function Home() {
             <img
               src={active.image}
               alt={active.alt}
+              loading="lazy"
+              decoding="async"
               className="aspect-[4/5] w-full rounded-xl object-cover"
               onError={(e) => { e.currentTarget.style.opacity = '0.4' }}
             />

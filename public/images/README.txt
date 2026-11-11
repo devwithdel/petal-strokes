@@ -10,3 +10,7 @@ Place her real bouquet photos here with these filenames:
   og-cover.jpg (for social share previews, ~1200x630)
 
 Until then, the site references these paths and will show broken images.
+
+Performance tips:
+- Convert images to WebP and keep each under ~200 KB.
+- If you switch to .webp, update the filenames in src/data/catalog.js (and hero-bouquet.png) to match.

@@ -12,6 +12,9 @@ export function BouquetCard({ bouquet, onClick }) {
             src={bouquet.image}
             alt={bouquet.alt}
             loading="lazy"
+            decoding="async"
+            width="400"
+            height="500"
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
             onError={(e) => { e.currentTarget.style.opacity = '0.4' }}
           />
