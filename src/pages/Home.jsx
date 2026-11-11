@@ -75,7 +75,7 @@ export default function Home() {
       <section className="py-16 sm:py-20">
         <Container>
           <div className="reveal">
-            <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-deep">Featured</p>
+            <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">Featured</p>
             <h2 className="mt-2 font-script text-4xl sm:text-5xl text-charcoal">Our favourites</h2>
           </div>
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -93,7 +93,7 @@ export default function Home() {
         <Container size="md">
           <div className="grid gap-8 md:grid-cols-2 md:items-center">
             <div className="reveal">
-              <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-deep">Our story</p>
+              <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">Our story</p>
               <h2 className="mt-2 font-script text-4xl sm:text-5xl text-charcoal">Made by hand, sent with love.</h2>
               <p className="mt-4 text-charcoal-soft">
                 Petal Strokes started as a small passion project — satin ribbon roses
@@ -121,7 +121,7 @@ export default function Home() {
       <section className="py-16 sm:py-20">
         <Container>
           <div className="reveal text-center">
-            <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-deep">Ribbon colors</p>
+            <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">Ribbon colors</p>
             <h2 className="mt-2 font-script text-4xl sm:text-5xl text-charcoal">Choose your palette</h2>
           </div>
           <div className="reveal mt-8 flex flex-wrap justify-center gap-4">
@@ -142,7 +142,7 @@ export default function Home() {
       <section id="message-us" className="bg-cream/60 py-16 sm:py-20">
         <Container size="md" className="text-center">
           <div className="reveal">
-            <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-deep">Ordering</p>
+            <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">Ordering</p>
             <h2 className="mt-2 font-script text-4xl sm:text-5xl text-charcoal">Ready to order?</h2>
             <p className="mt-4 text-charcoal-soft">
               Send us a message on your favourite platform. We'll confirm details

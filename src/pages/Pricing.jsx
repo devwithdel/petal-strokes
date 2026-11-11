@@ -8,7 +8,7 @@ export default function Pricing() {
     <div ref={ref}>
       <Container className="py-12 sm:py-16">
         <div className="reveal">
-          <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-deep">Pricing guide</p>
+          <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">Pricing guide</p>
           <h1 className="mt-2 font-script text-5xl text-charcoal">Simple, honest prices</h1>
           <p className="mt-3 max-w-xl text-charcoal-soft">
             All prices in Philippine pesos. Final total confirmed in chat.
@@ -30,7 +30,7 @@ export default function Pricing() {
                 {SIZES.map((s) => (
                   <tr key={s.pieces} className="border-t border-line">
                     <td className="px-4 py-3 text-charcoal">{s.pieces} ribbon roses</td>
-                    <td className="px-4 py-3 font-medium text-rose-deep">₱{s.price}</td>
+                    <td className="px-4 py-3 font-medium text-rose-text">₱{s.price}</td>
                   </tr>
                 ))}
               </tbody>
@@ -45,7 +45,7 @@ export default function Pricing() {
             {ADDONS.map((a) => (
               <div key={a.id} className="flex items-center justify-between rounded-xl bg-cream px-4 py-3 shadow-soft">
                 <span className="text-charcoal">{a.name}</span>
-                <span className="font-medium text-rose-deep">₱{a.price}{a.quantity ? ' each' : ''}</span>
+                <span className="font-medium text-rose-text">₱{a.price}{a.quantity ? ' each' : ''}</span>
               </div>
             ))}
           </div>

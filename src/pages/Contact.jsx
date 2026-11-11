@@ -35,7 +35,7 @@ export default function Contact() {
     <div ref={ref} id="contact-section">
       <Container className="py-12 sm:py-16">
         <div className="reveal">
-          <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-deep">Contact</p>
+          <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">Contact</p>
           <h1 className="mt-2 font-script text-5xl text-charcoal">Message us</h1>
           <p className="mt-3 max-w-xl text-charcoal-soft">
             We're one message away. Tap a platform to start chatting.
@@ -51,7 +51,7 @@ export default function Contact() {
               className="reveal card-lift block rounded-2xl bg-cream p-6 shadow-soft"
             >
               <h3 className="font-script text-3xl text-charcoal">{p.name}</h3>
-              <p className="mt-1 text-sm font-medium text-rose-deep">{p.handle}</p>
+              <p className="mt-1 text-sm font-medium text-rose-text">{p.handle}</p>
               <p className="mt-2 text-sm text-charcoal-soft">{p.desc}</p>
               <span className="mt-4 inline-block text-sm font-medium text-charcoal underline underline-offset-4">
                 {p.cta} →

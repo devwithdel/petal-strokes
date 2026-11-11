@@ -17,7 +17,7 @@ export default function Gallery() {
     <div ref={ref}>
       <Container className="py-12 sm:py-16">
         <div className="reveal">
-          <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-deep">Gallery</p>
+          <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">Gallery</p>
           <h1 className="mt-2 font-script text-5xl text-charcoal">Our bouquets</h1>
           <p className="mt-3 max-w-xl text-charcoal-soft">
             Tap any bouquet to see sizes, colors and add-ons, then send us a message.

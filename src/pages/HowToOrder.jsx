@@ -13,7 +13,7 @@ export default function HowToOrder() {
     <div ref={ref}>
       <Container className="py-12 sm:py-16">
         <div className="reveal">
-          <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-deep">How to order</p>
+          <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">How to order</p>
           <h1 className="mt-2 font-script text-5xl text-charcoal">Three simple steps</h1>
           <p className="mt-3 max-w-xl text-charcoal-soft">
             Orders are handled by private message — no cart, no checkout. Just chat with us.
@@ -22,7 +22,7 @@ export default function HowToOrder() {
         <div className="mt-10 grid gap-6 sm:grid-cols-3">
           {steps.map((s) => (
             <div key={s.n} className="reveal rounded-2xl bg-cream p-6 shadow-soft">
-              <span className="font-script text-5xl text-rose-deep">{s.n}</span>
+              <span className="font-script text-5xl text-rose-text">{s.n}</span>
               <h3 className="mt-2 font-script text-2xl text-charcoal">{s.title}</h3>
               <p className="mt-2 text-sm text-charcoal-soft">{s.body}</p>
             </div>
