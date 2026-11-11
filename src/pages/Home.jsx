@@ -13,7 +13,6 @@ import { InquiryPanel } from '../components/InquiryPanel'
 export default function Home() {
   const ref = useReveal()
   const [heroOk, setHeroOk] = useState(true)
-  const [selectedColor, setSelectedColor] = useState(RIBBON_COLORS[0])
   const [orderSize, setOrderSize] = useState(SIZES[1])
   const [openFaq, setOpenFaq] = useState(0)
   const { toast, show } = useToast()
@@ -128,28 +127,9 @@ export default function Home() {
               Choose your size, ribbon color and add-ons. We'll generate a ready-to-send message for you.
             </p>
           </div>
-          <div className="mt-8 grid gap-8 lg:grid-cols-2">
-            <div className="lg:sticky lg:top-24 lg:self-start">
-              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-blush/40 shadow-card">
-                <img
-                  key={selectedColor.id}
-                  src={COLOR_IMAGES[selectedColor.id] || '/images/hero-bouquet.webp'}
-                  alt={`Satin ribbon rose bouquet in ${selectedColor.name}`}
-                  width="480"
-                  height="600"
-                  className="h-full w-full object-cover transition-opacity duration-300"
-                  onError={(e) => {
-                    if (e.currentTarget.src.includes('hero-bouquet.webp')) {
-                      e.currentTarget.style.display = 'none'
-                    } else {
-                      e.currentTarget.src = '/images/hero-bouquet.webp'
-                    }
-                  }}
-                />
-              </div>
-            </div>
+          <div className="mt-8">
             <div className="rounded-2xl bg-cream p-6 shadow-soft sm:p-8">
-              <InquiryPanel size={orderSize} onSizeChange={setOrderSize} onToast={show} onColorChange={setSelectedColor} />
+              <InquiryPanel size={orderSize} onSizeChange={setOrderSize} onToast={show} />
             </div>
           </div>
         </Container>
