@@ -38,7 +38,7 @@ export default function Home() {
           <div className="grid items-center gap-10 lg:grid-cols-2">
             <div>
               <p className="reveal text-sm font-medium uppercase tracking-[0.25em] text-rose-text">
-                Handmade satin ribbon roses · Ozamiz City
+                {SITE.eyebrow}
               </p>
               <h1 className="sr-only">{SITE.name}</h1>
               <img

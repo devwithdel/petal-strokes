@@ -28,11 +28,8 @@ export const FAQ = [
 // CONFIRM WITH OWNER: review and edit this story text.
 export const story = {
   eyebrow: 'Our story',
-  heading: 'Made by hand, sent with love.',
-  body: [
-    'Petal Strokes started as a small passion project — satin ribbon roses shaped petal by petal, each bouquet a little labour of love. No two are ever exactly alike.',
-    'We’d love to make something special for you. Browse, pick your colours, and send us a message to order.',
-  ],
+  heading: SITE.storyHeading,
+  body: SITE.storyBody,
 }
 
 // CONFIRM WITH OWNER: review these highlight labels.
@@ -58,12 +55,21 @@ export const COLOR_IMAGES = {
   cream: '/images/bouquet-cream.webp',
 }
 
-// CONFIRM WITH OWNER: review the tagline and ordering text.
+// CONFIRM WITH OWNER: review all site-wide copy below.
 export const SITE = {
-  name: 'Petal Strokes',
-  tagline: 'Handmade satin ribbon rose bouquets, made with love in Ozamiz City.',
-  city: 'Ozamiz City, Philippines',
-  orderingText: 'Orders are made to order and handled by private message.',
+  name: 'Petal Strokes', // CONFIRM WITH OWNER
+  eyebrow: 'HANDCRAFTED FLOWER BOUQUETS · OZAMIZ CITY', // CONFIRM WITH OWNER
+  tagline: 'Handcrafted flower bouquets, made with love in Ozamiz City.', // CONFIRM WITH OWNER
+  shortDescription: 'Handcrafted flower bouquets made by hand in Ozamiz City, Philippines. Browse sizes and prices, pick your colors, and message us to order.', // CONFIRM WITH OWNER
+  metaTitle: 'Petal Strokes — Handcrafted Flower Bouquets | Ozamiz City', // CONFIRM WITH OWNER
+  metaDescription: 'Handcrafted flower bouquets made by hand in Ozamiz City, Philippines. Browse sizes and prices, pick your colors, and message us to order.', // CONFIRM WITH OWNER
+  city: 'Ozamiz City, Philippines', // CONFIRM WITH OWNER
+  orderingText: 'Orders are made to order and handled by private message.', // CONFIRM WITH OWNER
+  storyHeading: 'Made by hand, sent with love.', // CONFIRM WITH OWNER
+  storyBody: [ // CONFIRM WITH OWNER
+    'Every Petal Strokes bouquet is made by hand, one flower at a time. Pick your size, choose your colors, and add the little extras that make it personal. Message us and we\'ll make it just for you.',
+  ],
+  orderMessageTemplate: 'Hi Petal Strokes! I\'d like to order a handcrafted flower bouquet: [N] pieces in [color] ribbon, with [add-ons or \'no add-ons\']. Estimated total: ₱[amount]. Please let me know if it\'s available!', // CONFIRM WITH OWNER
   instagram: { handle: '@petalstroke_8', dm: 'https://ig.me/m/petalstroke_8', url: 'https://ig.me/m/petalstroke_8' },
   tiktok: { handle: '@petalstrokes6', url: 'https://www.tiktok.com/@petalstrokes6' },
   // CONFIRM WITH OWNER: review the Facebook link.
