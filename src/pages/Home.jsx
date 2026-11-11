@@ -8,7 +8,7 @@ import { Toast } from '../components/ui/Toast'
 import { useToast } from '../hooks/useToast'
 import { useReveal } from '../hooks/useReveal'
 import { BOUQUETS, FAQ, RIBBON_COLORS, SIZES, SITE, STORY, TESTIMONIALS } from '../data/catalog'
-import { BouquetCard } from '../components/BouquetCard'
+
 import { InquiryPanel } from '../components/InquiryPanel'
 
 export default function Home() {
@@ -17,7 +17,7 @@ export default function Home() {
   const [heroOk, setHeroOk] = useState(true)
   const [openFaq, setOpenFaq] = useState(0)
   const { toast, show } = useToast()
-  const featured = BOUQUETS.filter((b) => b.featured)
+
 
   return (
     <div ref={ref}>
@@ -109,22 +109,6 @@ export default function Home() {
       </section>
 
       <WaveDivider flip />
-      {/* Featured */}
-      <section id="featured" className="py-16 sm:py-20">
-        <Container>
-          <div className="reveal">
-            <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">Featured</p>
-            <h2 className="mt-2 font-script text-4xl sm:text-5xl text-charcoal">Our favourites</h2>
-          </div>
-          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {featured.map((b) => (
-              <div key={b.id} className="reveal">
-                <BouquetCard bouquet={b} onClick={() => setActive(b)} />
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
 
       {/* Brand story */}
       <section className="py-16 sm:py-20">
