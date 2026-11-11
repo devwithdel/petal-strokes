@@ -25,6 +25,27 @@ export const FAQ = [
   },
 ]
 
+// CONFIRM WITH OWNER: review all site-wide copy below.
+export const SITE = {
+  name: 'Petal Strokes', // CONFIRM WITH OWNER
+  eyebrow: 'HANDCRAFTED FLOWER BOUQUETS · OZAMIZ CITY', // CONFIRM WITH OWNER
+  tagline: 'Handcrafted flower bouquets, made with love in Ozamiz City.', // CONFIRM WITH OWNER
+  shortDescription: 'Handcrafted flower bouquets made by hand in Ozamiz City, Philippines. Browse sizes and prices, pick your colors, and message us to order.', // CONFIRM WITH OWNER
+  metaTitle: 'Petal Strokes — Handcrafted Flower Bouquets | Ozamiz City', // CONFIRM WITH OWNER
+  metaDescription: 'Handcrafted flower bouquets made by hand in Ozamiz City, Philippines. Browse sizes and prices, pick your colors, and message us to order.', // CONFIRM WITH OWNER
+  city: 'Ozamiz City, Philippines', // CONFIRM WITH OWNER
+  orderingText: 'Orders are made to order and handled by private message.', // CONFIRM WITH OWNER
+  storyHeading: 'Made by hand, sent with love.', // CONFIRM WITH OWNER
+  storyBody: [ // CONFIRM WITH OWNER
+    'Every Petal Strokes bouquet is made by hand, one flower at a time. Pick your size, choose your colors, and add the little extras that make it personal. Message us and we\'ll make it just for you.',
+  ],
+  orderMessageTemplate: 'Hi Petal Strokes! I\'d like to order a handcrafted flower bouquet: [N] pieces in [color] ribbon, with [add-ons or \'no add-ons\']. Estimated total: ₱[amount]. Please let me know if it\'s available!', // CONFIRM WITH OWNER
+  instagram: { handle: '@petalstroke_8', dm: 'https://ig.me/m/petalstroke_8', url: 'https://ig.me/m/petalstroke_8' },
+  tiktok: { handle: '@petalstrokes6', url: 'https://www.tiktok.com/@petalstrokes6' },
+  // CONFIRM WITH OWNER: review the Facebook link.
+  facebook: { handle: 'Petal Strokes', dm: 'https://www.facebook.com/profile.php?id=61593725474100', url: 'https://www.facebook.com/profile.php?id=61593725474100' },
+}
+
 // CONFIRM WITH OWNER: review and edit this story text.
 export const story = {
   eyebrow: 'Our story',
@@ -53,27 +74,6 @@ export const COLOR_IMAGES = {
   blue: '/images/bouquet-blue.webp',
   purple: '/images/bouquet-purple.webp',
   cream: '/images/bouquet-cream.webp',
-}
-
-// CONFIRM WITH OWNER: review all site-wide copy below.
-export const SITE = {
-  name: 'Petal Strokes', // CONFIRM WITH OWNER
-  eyebrow: 'HANDCRAFTED FLOWER BOUQUETS · OZAMIZ CITY', // CONFIRM WITH OWNER
-  tagline: 'Handcrafted flower bouquets, made with love in Ozamiz City.', // CONFIRM WITH OWNER
-  shortDescription: 'Handcrafted flower bouquets made by hand in Ozamiz City, Philippines. Browse sizes and prices, pick your colors, and message us to order.', // CONFIRM WITH OWNER
-  metaTitle: 'Petal Strokes — Handcrafted Flower Bouquets | Ozamiz City', // CONFIRM WITH OWNER
-  metaDescription: 'Handcrafted flower bouquets made by hand in Ozamiz City, Philippines. Browse sizes and prices, pick your colors, and message us to order.', // CONFIRM WITH OWNER
-  city: 'Ozamiz City, Philippines', // CONFIRM WITH OWNER
-  orderingText: 'Orders are made to order and handled by private message.', // CONFIRM WITH OWNER
-  storyHeading: 'Made by hand, sent with love.', // CONFIRM WITH OWNER
-  storyBody: [ // CONFIRM WITH OWNER
-    'Every Petal Strokes bouquet is made by hand, one flower at a time. Pick your size, choose your colors, and add the little extras that make it personal. Message us and we\'ll make it just for you.',
-  ],
-  orderMessageTemplate: 'Hi Petal Strokes! I\'d like to order a handcrafted flower bouquet: [N] pieces in [color] ribbon, with [add-ons or \'no add-ons\']. Estimated total: ₱[amount]. Please let me know if it\'s available!', // CONFIRM WITH OWNER
-  instagram: { handle: '@petalstroke_8', dm: 'https://ig.me/m/petalstroke_8', url: 'https://ig.me/m/petalstroke_8' },
-  tiktok: { handle: '@petalstrokes6', url: 'https://www.tiktok.com/@petalstrokes6' },
-  // CONFIRM WITH OWNER: review the Facebook link.
-  facebook: { handle: 'Petal Strokes', dm: 'https://www.facebook.com/profile.php?id=61593725474100', url: 'https://www.facebook.com/profile.php?id=61593725474100' },
 }
 
 // CONFIRM WITH OWNER: review footer section titles, links, and copyright text.
