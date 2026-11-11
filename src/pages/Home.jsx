@@ -269,7 +269,7 @@ export default function Home() {
           <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">
             Still have questions?
           </p>
-          <h2 className="mt-2 font-script text-4xl sm:text-5xl text-charcoal">
+          <h2 className="mt-2 font-script text-4xl sm:text-5xl text-rose-text">
             Let's talk flowers
           </h2>
           <p className="mt-4 text-lg text-body">
