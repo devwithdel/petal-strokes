@@ -6,6 +6,7 @@ import { useToast } from '../hooks/useToast'
 import { useReveal } from '../hooks/useReveal'
 import { BOUQUETS } from '../data/catalog'
 import { BouquetCard } from '../components/BouquetCard'
+import { BouquetImage } from '../components/ui/BouquetImage'
 import { InquiryPanel } from '../components/InquiryPanel'
 
 export default function Gallery() {
@@ -37,11 +38,11 @@ export default function Gallery() {
       <Modal open={!!active} onClose={() => setActive(null)} title={active?.name} size="lg">
         {active && (
           <div className="grid gap-6 p-6 md:grid-cols-2">
-            <img
+            <BouquetImage
               src={active.image}
               alt={active.alt}
-              className="aspect-[4/5] w-full rounded-xl object-cover"
-              onError={(e) => { e.currentTarget.style.opacity = '0.4' }}
+              className="aspect-[4/5] w-full rounded-xl"
+              eager
             />
             <div>
               <h2 className="font-script text-4xl text-charcoal">{active.name}</h2>

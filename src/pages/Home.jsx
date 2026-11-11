@@ -1,12 +1,12 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import { Container } from '../components/ui/Container'
 import { WaveDivider } from '../components/ui/WaveDivider'
 import { Button } from '../components/ui/Button'
 import { Toast } from '../components/ui/Toast'
 import { useToast } from '../hooks/useToast'
 import { useReveal } from '../hooks/useReveal'
-import { BOUQUETS, COLOR_IMAGES, FAQ, REPLY_TIME, SIZES, SITE, STORY_HIGHLIGHTS, story as STORY, TESTIMONIALS } from '../data/catalog'
+import { FAQ, REPLY_TIME, SIZES, SITE, STORY_HIGHLIGHTS, story as STORY, TESTIMONIALS } from '../data/catalog'
+import { TikTokIcon } from '../components/ui/BrandIcons'
 
 import { InquiryPanel } from '../components/InquiryPanel'
 
@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <div ref={ref}>
       {/* Hero */}
-      <section className="relative flex min-h-[calc(100svh-72px)] max-h-[760px] items-center overflow-hidden">
+      <section className="relative flex min-h-[calc(100svh-72px)] items-center overflow-hidden lg:max-h-[760px]">
         <div className="light-beam -top-24 -right-10" />
         <Container className="relative py-8 sm:py-12">
           <div className="grid items-center gap-10 lg:grid-cols-2">
@@ -35,8 +35,8 @@ export default function Home() {
                 src="/petal-strokes-wordmark.png"
                 alt=""
                 aria-hidden="true"
-                width="420"
-                height="120"
+                width="751"
+                height="423"
                 fetchPriority="high"
                 className="reveal mt-4 mb-4 h-auto w-full max-w-[clamp(220px,30vw,380px)]"
                 onError={(e) => { e.currentTarget.style.display = 'none' }}
@@ -56,8 +56,8 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <div className="reveal flex justify-center lg:justify-end overflow-hidden">
-              <div className="float-bouquet relative max-h-[460px] sm:max-h-[460px] w-full max-w-md -rotate-3 overflow-hidden">
+            <div className="reveal flex justify-center lg:justify-end">
+              <div className="float-bouquet relative h-[300px] w-full max-w-md -rotate-3 sm:h-[400px] lg:h-[460px]">
                 {heroOk ? (
                   <img
                     src="/images/hero-bouquet.webp"
@@ -65,7 +65,7 @@ export default function Home() {
                     width="480"
                     height="600"
                     fetchPriority="high"
-                    className="h-full w-full rounded-3xl object-contain"
+                    className="h-full w-full rounded-3xl object-cover shadow-card"
                     onError={() => setHeroOk(false)}
                   />
                 ) : (
@@ -74,7 +74,7 @@ export default function Home() {
                     className="flex h-full w-full items-center justify-center rounded-3xl bg-gradient-to-br from-blush via-rose-peach to-rose shadow-card"
                   >
                     <img
-                      src="/images/petal-strokes-emblem.png"
+                      src="/petal-strokes-emblem.png"
                       alt=""
                       aria-hidden="true"
                       width="160"
@@ -99,7 +99,7 @@ export default function Home() {
 
       <WaveDivider />
       {/* Price strip */}
-      <section className="section-veil section-pad">
+      <section id="featured" className="section-veil section-pad">
         <Container>
           <div className="reveal text-center">
             <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">Starting at ₱180</p>
@@ -151,7 +151,7 @@ export default function Home() {
             <div className="mb-4 flex items-center justify-center gap-3">
               <span className="h-px w-12 bg-rose-text/40" />
               <img
-                src="/images/petal-strokes-emblem.png"
+                src="/petal-strokes-emblem.png"
                 alt=""
                 aria-hidden="true"
                 width="48"
@@ -298,9 +298,7 @@ export default function Home() {
               className="inline-flex w-full sm:w-auto h-[52px] min-w-[180px] items-center justify-center gap-2 rounded-full border-2 border-rose-deep bg-cream px-6 text-base font-medium text-rose-text transition hover:bg-rose-deep hover:text-cream focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
               aria-label="TikTok"
             >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 3v4.4a4 4 0 0 0-.8 2.4l-1.4 2.2a4 4 0 0 0-.3 2.4v2c0 .6.4 1 1 1h6.4a1 1 0 0 0 1-1V12a4 4 0 0 0-.3-2.4l-1.4-2.2A4 4 0 0 0 12 7.4V3z" />
-              </svg>
+              <TikTokIcon size={20} />
               TikTok
             </a>
           </div>
