@@ -22,6 +22,16 @@ export function Navbar() {
     return () => document.removeEventListener('keydown', onKey)
   }, [open])
 
+  // Prevent the page behind the open mobile menu from scrolling.
+  useEffect(() => {
+    if (!open) return
+    const previous = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = previous
+    }
+  }, [open])
+
   return (
     <header className="sticky top-0 z-40 border-b border-[rgba(122,46,60,0.08)] bg-cream/95 shadow-[0_4px_20px_-12px_rgba(122,46,60,0.25)] backdrop-blur-md supports-[backdrop-filter]:bg-cream/80">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-8">
@@ -69,7 +79,7 @@ export function Navbar() {
 
         <button
           type="button"
-          className="rounded-full p-2 text-charcoal transition-colors hover:bg-blush/60 md:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-full text-charcoal transition-colors hover:bg-blush/60 md:hidden"
           onClick={() => setOpen((v) => !v)}
           aria-label={open ? 'Close menu' : 'Open menu'}
           aria-expanded={open}

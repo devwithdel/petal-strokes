@@ -51,12 +51,12 @@ export function Footer() {
             <h2 className="mb-3 font-sans text-sm font-semibold uppercase tracking-wider text-rose-text">
               {FOOTER.explore.title}
             </h2>
-            <ul className="space-y-2">
+            <ul className="space-y-1">
               {FOOTER.explore.links.map((link) => (
                 <li key={link.label}>
                   <Link
                     to={toHref(link.href)}
-                    className="rounded text-base text-body underline decoration-transparent underline-offset-4 transition-colors hover:text-rose-deep hover:decoration-current focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
+                    className="-mx-2 flex min-h-11 items-center rounded px-2 text-base text-body underline decoration-transparent underline-offset-4 transition-colors hover:text-rose-deep hover:decoration-current focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
                   >
                     {link.label}
                   </Link>
@@ -111,7 +111,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-[rgba(122,46,60,0.15)] py-8">
+        <div className="border-t border-[rgba(122,46,60,0.15)] pt-8 pb-24 md:pb-8">
           <div className="flex flex-col gap-3 text-sm leading-7 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-body">{FOOTER.bottom.copyright}</p>
             <a
@@ -121,7 +121,7 @@ export function Footer() {
                 const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
                 window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' })
               }}
-              className="rounded text-body transition-colors hover:text-rose-deep focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
+              className="inline-flex min-h-11 items-center rounded text-body transition-colors hover:text-rose-deep focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
             >
               {FOOTER.bottom.backToTop}
             </a>

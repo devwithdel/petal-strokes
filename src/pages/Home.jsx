@@ -50,14 +50,14 @@ export default function Home() {
                 </Button>
                 <a
                   href="#message-us"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border-2 border-rose-deep bg-cream px-7 py-3.5 text-base font-medium text-rose-deep transition-all duration-200 hover:bg-rose-deep hover:text-cream"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border-2 border-rose-deep bg-cream px-7 py-3 text-base font-medium text-rose-deep transition-all duration-200 hover:bg-rose-deep hover:text-cream"
                 >
                   Message us
                 </a>
               </div>
             </div>
             <div className="reveal flex justify-center lg:justify-end">
-              <div className="float-bouquet relative h-[300px] w-full max-w-md -rotate-3 sm:h-[400px] lg:h-[460px]">
+              <div className="float-bouquet relative h-[300px] w-[92%] max-w-md -rotate-3 sm:h-[400px] sm:w-full lg:h-[460px]">
                 {heroOk ? (
                   <img
                     src="/images/hero-bouquet.webp"
