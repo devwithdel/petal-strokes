@@ -262,26 +262,26 @@ export default function Home() {
       )}
 
       {/* Ready to order */}
-      <section id="message-us" className="section-pad">
+      <section id="message-us" className="py-12 sm:py-16">
         <div
-          className="reveal mx-auto max-w-[520px] rounded-[28px] bg-[rgba(251,247,240,0.35)] shadow-card p-10 sm:p-16 text-center"
+          className="reveal mx-auto w-[calc(100%-32px)] max-w-[760px] rounded-[28px] bg-[rgba(251,247,240,0.35)] shadow-card px-6 sm:px-10 py-10 sm:py-14 text-center"
         >
           <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">
             Still have questions?
           </p>
-          <h2 className="mt-2 font-script text-4xl sm:text-5xl text-rose-text">
+          <h2 className="mt-2 mb-3 font-script text-4xl sm:text-5xl text-rose-text">
             Let's talk flowers
           </h2>
           <p className="mt-4 text-lg text-body">
             Message us on your favourite platform. We'll confirm details and the
             final price in chat.
           </p>
-          <div className="mt-8 flex flex-col sm:flex-row justify-center gap-3 w-full sm:max-w-[420px]">
+          <div className="mt-6 flex flex-col sm:flex-row flex-wrap justify-center gap-6 sm:gap-14 w-full">
             <a
               href={SITE.instagram.dm}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex w-full sm:w-auto h-[52px] min-w-[180px] items-center justify-center gap-2 rounded-full bg-rose-deep px-6 text-base font-medium text-cream transition-all duration-200 hover:bg-charcoal hover:-translate-y-2 hover:shadow-soft focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
+              className="w-full sm:flex-[1_1_0] sm:min-w-[150px] sm:max-w-[200px] h-[52px] items-center justify-center gap-2 rounded-full bg-rose-deep px-5 text-base font-medium text-cream transition-all duration-200 hover:bg-charcoal hover:-translate-y-2 hover:shadow-soft focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
               aria-label={`Message Petal Strokes on Instagram, ${SITE.instagram.handle}`}
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -295,7 +295,7 @@ export default function Home() {
               href={SITE.tiktok.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex w-full sm:w-auto h-[52px] min-w-[180px] items-center justify-center gap-2 rounded-full border-2 border-rose-text bg-cream px-6 text-base font-medium text-rose-text transition-all duration-200 hover:bg-rose-deep hover:text-cream hover:-translate-y-2 hover:shadow-soft focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
+              className="w-full sm:flex-[1_1_0] sm:min-w-[150px] sm:max-w-[200px] h-[52px] items-center justify-center gap-2 rounded-full border-2 border-rose-text bg-cream px-5 text-base font-medium text-rose-text transition-all duration-200 hover:bg-rose-deep hover:text-cream hover:-translate-y-2 hover:shadow-soft focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
               aria-label={`Message Petal Strokes on TikTok, ${SITE.tiktok.handle}`}
             >
               <TikTokIcon size={20} />
@@ -305,21 +305,13 @@ export default function Home() {
               href={SITE.facebook.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex w-full sm:w-auto h-[52px] min-w-[180px] items-center justify-center gap-2 rounded-full border-2 border-rose-text bg-cream px-6 text-base font-medium text-rose-text transition-all duration-200 hover:bg-rose-deep hover:text-cream hover:-translate-y-2 hover:shadow-soft focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
+              className="w-full sm:flex-[1_1_0] sm:min-w-[150px] sm:max-w-[200px] h-[52px] items-center justify-center gap-2 rounded-full border-2 border-rose-text bg-cream px-5 text-base font-medium text-rose-text transition-all duration-200 hover:bg-rose-deep hover:text-cream hover:-translate-y-2 hover:shadow-soft focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
               aria-label={`Message Petal Strokes on Facebook, ${SITE.facebook.handle}`}
             >
               <FacebookIcon size={20} />
               Facebook
             </a>
           </div>
-          <p className="mt-6 text-sm text-body">
-            <a
-              href="#order"
-              className="text-rose-text underline underline-offset-4 hover:text-rose-deep focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
-            >
-              Build your bouquet
-            </a>
-          </p>
         </div>
       </section>
 
