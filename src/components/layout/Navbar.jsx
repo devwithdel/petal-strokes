@@ -3,7 +3,6 @@ import { Link, NavLink } from 'react-router-dom'
 
 const links = [
   { to: '/', label: 'Home' },
-  { to: '/#order', label: 'Order', hash: 'order' },
   { to: '/gallery', label: 'Gallery' },
   { to: '/pricing', label: 'Pricing' },
   { to: '/how-to-order', label: 'How to order' },
@@ -12,23 +11,6 @@ const links = [
 
 export function Navbar() {
   const [open, setOpen] = useState(false)
-  const [activeHash, setActiveHash] = useState('')
-
-  useEffect(() => {
-    const orderEl = document.getElementById('order')
-    if (!orderEl) return
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) setActiveHash('order')
-          else setActiveHash((prev) => (prev === 'order' ? '' : prev))
-        })
-      },
-      { threshold: 0.3 }
-    )
-    io.observe(orderEl)
-    return () => io.disconnect()
-  }, [])
 
   return (
     <header className="sticky top-0 z-40 border-b border-[rgba(122,46,60,0.08)] bg-cream/85 backdrop-blur-md shadow-[0_4px_20px_-12px_rgba(122,46,60,0.25)]">
@@ -49,35 +31,19 @@ export function Navbar() {
           <span className="hidden font-script text-3xl text-charcoal">Petal Strokes</span>
         </Link>
         <nav className="hidden items-center gap-1 md:flex">
-          {links.map((l) => {
-            const isActive = l.hash ? activeHash === l.hash : false
-            if (l.hash) {
-              return (
-                <a
-                  key={l.to}
-                  href={l.to}
-                  className={`rounded-full px-3 py-1.5 text-sm font-medium transition-colors ${
-                    isActive ? 'bg-rose-deep text-cream' : 'text-charcoal-soft hover:text-charcoal'
-                  }`}
-                >
-                  {l.label}
-                </a>
-              )
-            }
-            return (
-              <NavLink
-                key={l.to}
-                to={l.to}
-                className={({ isActive }) =>
-                  `rounded-full px-3 py-1.5 text-sm font-medium transition-colors ${
-                    isActive ? 'bg-rose-deep text-cream' : 'text-charcoal-soft hover:text-charcoal'
-                  }`
-                }
-              >
-                {l.label}
-              </NavLink>
-            )
-          })}
+          {links.map((l) => (
+            <NavLink
+              key={l.to}
+              to={l.to}
+              className={({ isActive }) =>
+                `rounded-full px-3 py-1.5 text-sm font-medium transition-colors ${
+                  isActive ? 'bg-rose-deep text-cream' : 'text-charcoal-soft hover:text-charcoal'
+                }`
+              }
+            >
+              {l.label}
+            </NavLink>
+          ))}
         </nav>
         <button
           className="rounded-full p-2 text-charcoal md:hidden"
@@ -97,37 +63,20 @@ export function Navbar() {
       {open && (
         <div className="border-t border-line/60 bg-cream/95 md:hidden">
           <nav className="mx-auto flex max-w-6xl flex-col px-4 py-3">
-            {links.map((l) => {
-              const isActive = l.hash ? activeHash === l.hash : false
-              if (l.hash) {
-                return (
-                  <a
-                    key={l.to}
-                    href={l.to}
-                    onClick={() => setOpen(false)}
-                    className={`rounded-lg px-3 py-2 text-base font-medium ${
-                      isActive ? 'bg-rose-deep text-cream' : 'text-charcoal-soft'
-                    }`}
-                  >
-                    {l.label}
-                  </a>
-                )
-              }
-              return (
-                <NavLink
-                  key={l.to}
-                  to={l.to}
-                  onClick={() => setOpen(false)}
-                  className={({ isActive }) =>
-                    `rounded-lg px-3 py-2 text-base font-medium ${
-                      isActive ? 'bg-rose-deep text-cream' : 'text-charcoal-soft'
-                    }`
-                  }
-                >
-                  {l.label}
-                </NavLink>
-              )
-            })}
+            {links.map((l) => (
+              <NavLink
+                key={l.to}
+                to={l.to}
+                onClick={() => setOpen(false)}
+                className={({ isActive }) =>
+                  `rounded-lg px-3 py-2 text-base font-medium ${
+                    isActive ? 'bg-rose-deep text-cream' : 'text-charcoal-soft'
+                  }`
+                }
+              >
+                {l.label}
+              </NavLink>
+            ))}
           </nav>
         </div>
       )}
