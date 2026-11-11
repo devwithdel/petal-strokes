@@ -1,4 +1,5 @@
 import { FOOTER, SITE } from '../../data/catalog'
+import { SocialIcon } from '../ui/SocialIcon'
 
 export function Footer() {
   return (
@@ -46,40 +47,28 @@ export function Footer() {
             <p className="text-sm font-semibold text-charcoal uppercase tracking-wider mb-3">{FOOTER.findUs.title}</p>
             <ul className="space-y-2">
               <li>
-                <a
-                  href={SITE.instagram.dm}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 rounded-full bg-cream px-3 py-1.5 text-sm text-charcoal hover:bg-blush focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
-                  aria-label="Instagram"
-                >
-                  <span className="text-xs">IG</span>
-                  <span>{SITE.instagram.handle}</span>
-                </a>
+                <SocialIcon
+                  platform="instagram"
+                  url={SITE.instagram.dm}
+                  handle={SITE.instagram.handle}
+                  ariaLabel="Message Petal Strokes on Instagram"
+                />
               </li>
               <li>
-                <a
-                  href={SITE.tiktok.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 rounded-full bg-cream px-3 py-1.5 text-sm text-charcoal hover:bg-blush focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
-                  aria-label="TikTok"
-                >
-                  <span className="text-xs">TT</span>
-                  <span>{SITE.tiktok.handle}</span>
-                </a>
+                <SocialIcon
+                  platform="tiktok"
+                  url={SITE.tiktok.url}
+                  handle={SITE.tiktok.handle}
+                  ariaLabel="Message Petal Strokes on TikTok"
+                />
               </li>
               <li>
-                <a
-                  href={SITE.facebook.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 rounded-full bg-cream px-3 py-1.5 text-sm text-charcoal hover:bg-blush focus-visible:ring-2 focus-visible:ring-rose-deep focus-visible:ring-offset-2"
-                  aria-label="Facebook"
-                >
-                  <span className="text-xs">FB</span>
-                  <span>{SITE.facebook.handle}</span>
-                </a>
+                <SocialIcon
+                  platform="facebook"
+                  url={SITE.facebook.url}
+                  handle={SITE.facebook.handle}
+                  ariaLabel="Message Petal Strokes on Facebook"
+                />
               </li>
             </ul>
           </div>
