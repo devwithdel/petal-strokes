@@ -76,6 +76,8 @@
     outline: 2px solid var(--color-rose-deep);
     outline-offset: 2px;
   }
+  /* Keep anchored sections clear of the sticky navbar. */
+  [id] { scroll-margin-top: 5.5rem; }
   img { max-width: 100%; display: block; }
 }
 
