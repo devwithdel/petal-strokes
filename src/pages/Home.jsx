@@ -90,7 +90,7 @@ export default function Home() {
 
       <WaveDivider />
       {/* Price strip */}
-      <section className="py-10 sm:py-12">
+      <section className="section-veil py-10 sm:py-12">
         <Container>
           <div className="reveal text-center">
             <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">Starting at ₱180</p>
@@ -119,7 +119,7 @@ export default function Home() {
       <WaveDivider flip />
 
       {/* Order / Build your bouquet */}
-      <section id="order" className="py-16 sm:py-20">
+      <section id="order" className="section-veil py-16 sm:py-20">
         <Container>
           <div className="reveal text-center">
             <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">Build your bouquet</p>
@@ -176,7 +176,7 @@ export default function Home() {
 
 
       {/* FAQ */}
-      <section className="py-16 sm:py-20">
+      <section className="section-veil py-16 sm:py-20">
         <Container size="md">
           <div className="reveal text-center">
             <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">Good to know</p>
@@ -204,7 +204,7 @@ export default function Home() {
 
       {/* Testimonials */}
       {TESTIMONIALS.length > 0 && (
-        <section className="py-16 sm:py-20">
+        <section className="section-veil py-16 sm:py-20">
           <Container>
             <div className="reveal text-center">
               <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">Kind words</p>
