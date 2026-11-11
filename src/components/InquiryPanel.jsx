@@ -196,7 +196,7 @@ export function InquiryPanel({ onToast, onColorChange }) {
             href={SITE.instagram.dm}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex min-h-[44px] items-center justify-center rounded-full border border-rose-deep px-4 py-2.5 text-base font-medium text-rose-deep transition hover:bg-rose-deep hover:text-cream"
+            className="inline-flex min-h-[44px] items-center justify-center rounded-full bg-rose-deep px-4 py-2.5 text-base font-medium text-cream transition hover:bg-charcoal"
           >
             Open Instagram
           </a>
