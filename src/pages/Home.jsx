@@ -6,7 +6,7 @@ import { Modal } from '../components/ui/Modal'
 import { Toast } from '../components/ui/Toast'
 import { useToast } from '../hooks/useToast'
 import { useReveal } from '../hooks/useReveal'
-import { BOUQUETS, RIBBON_COLORS, SITE } from '../data/catalog'
+import { BOUQUETS, RIBBON_COLORS, SIZES, SITE } from '../data/catalog'
 import { BouquetCard } from '../components/BouquetCard'
 import { InquiryPanel } from '../components/InquiryPanel'
 
@@ -74,6 +74,25 @@ export default function Home() {
                 <path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </a>
+          </div>
+        </Container>
+      </section>
+
+      {/* Price strip */}
+      <section className="bg-cream/40 py-10 sm:py-12">
+        <Container>
+          <div className="reveal text-center">
+            <p className="text-sm font-medium uppercase tracking-[0.25em] text-rose-text">Starting at ₱180</p>
+            <h2 className="mt-1 font-script text-3xl text-charcoal">Pick your size</h2>
+          </div>
+          <div className="reveal mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+            {SIZES.map((s) => (
+              <div key={s.pieces} className="rounded-2xl bg-cream p-4 text-center shadow-soft">
+                <p className="font-script text-3xl text-rose-text">{s.pieces}</p>
+                <p className="text-xs text-charcoal-soft">roses</p>
+                <p className="mt-1 font-medium text-rose-deep">₱{s.price}</p>
+              </div>
+            ))}
           </div>
         </Container>
       </section>
