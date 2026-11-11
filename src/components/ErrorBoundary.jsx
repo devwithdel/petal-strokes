@@ -24,7 +24,9 @@ export class ErrorBoundary extends Component {
             Please message us on{' '}
             <a href="https://ig.me/m/petalstroke_8" target="_blank" rel="noopener noreferrer">Instagram</a>{' '}
             or{' '}
-            <a href="https://www.tiktok.com/@petalstrokes6" target="_blank" rel="noopener noreferrer">TikTok</a>.
+            <a href="https://www.tiktok.com/@petalstrokes6" target="_blank" rel="noopener noreferrer">TikTok</a>{' '}
+            or{' '}
+            <a href="https://www.facebook.com/profile.php?id=61593725474100" target="_blank" rel="noopener noreferrer">Facebook</a>.
           </p>
         </div>
       )
