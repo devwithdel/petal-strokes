@@ -22,9 +22,9 @@ export default function Home() {
   return (
     <div ref={ref}>
       {/* Hero */}
-      <section className="relative flex min-h-[80vh] items-center overflow-hidden section-pad">
+      <section className="relative flex min-h-[calc(100svh-72px)] max-h-[760px] items-center overflow-hidden">
         <div className="light-beam -top-24 -right-10" />
-        <Container className="relative py-12 sm:py-16">
+        <Container className="relative py-8 sm:py-12">
           <div className="grid items-center gap-10 lg:grid-cols-2">
             <div>
               <p className="reveal text-sm font-medium uppercase tracking-[0.25em] text-rose-text">
